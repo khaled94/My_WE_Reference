@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llOutstandingContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="@dimen/margin_10" app:srcCompat="@drawable/outstanding_icon"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_large_new" android:textColor="@color/colorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/outstanding_amount" style="@style/MyriadProBold"/>
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_large_new" android:textColor="@color/colorPrimary" android:gravity="center" android:layout_gravity="center" android:id="@+id/txtOutStandingAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MyriadProSemiBold"/>
+        </LinearLayout>
+    </LinearLayout>
+    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_large_new" android:textColor="@color/black_light" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/bill_services_disclaimr" style="@style/MyriadProBold"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvPaymentMethods" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp"/>
+</LinearLayout>

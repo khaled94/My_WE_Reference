@@ -1,0 +1,76 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+// General
+"ا" "" "" "a" // alif isol & init
+"ب" "" "$" "b" 
+"ب" "" "" "b1" // ba' isol
+"ت" "" "$" "t" 
+"ت" "" "" "t1" // ta' isol
+"ث" "" "$" "t" 
+"ث" "" "" "t1" // tha' isol
+"ج" "" "$" "(dZ|Z)" 
+"ج" "" "" "(dZ1|Z1)" // jim isol
+"ح" "^" "" "1" 
+"ح" "" "$" "1" 
+"ح" "" "" "(h1|1)" // h.a' isol
+"خ" "" "$" "x" 
+"خ" "" "" "x1" // kha' isol
+"د" "" "$" "d" 
+"د" "" "" "d1" // dal isol & init
+"ذ" "" "$" "d" 
+"ذ" "" "" "d1" // dhal isol & init
+"ر" "" "$" "r" 
+"ر" "" "" "r1" // ra' isol & init
+"ز" "" "$" "z" 
+"ز" "" "" "z1" // za' isol & init
+"س" "" "$" "s" 
+"س" "" "" "s1" // sin isol
+"ش" "" "$" "S" 
+"ش" "" "" "S1" // shin isol
+"ص" "" "$" "s" 
+"ص" "" "" "s1" // s.ad isol
+"ض" "" "$" "d" 
+"ض" "" "" "d1" // d.ad isol
+"ط" "" "$" "t" 
+"ط" "" "" "t1" // t.a' isol
+"ظ" "" "$" "z" 
+"ظ" "" "" "z1" // z.a' isol
+"ع" "^" "" "1" 
+"ع" "" "$" "1" 
+"ع" "" "" "(h1|1)" // ayin isol
+"غ" "" "$" "g" 
+"غ" "" "" "g1" // ghayin isol
+"�?" "" "$" "f" 
+"�?" "" "" "f1" // fa' isol
+"ق" "" "$" "k" 
+"ق" "" "" "k1" // qaf isol
+"ك" "" "$" "k" 
+"ك" "" "" "k1" // kaf isol
+"ل" "" "$" "l" 
+"ل" "" "" "l1" // lam isol
+"م" "" "$" "m" 
+"م" "" "" "m1" // mim isol
+"ن" "" "$" "n" 
+"ن" "" "" "n1" // nun isol
+"ه" "^" "" "1" 
+"ه" "" "$" "1" 
+"ه" "" "" "(h1|1)" // h isol
+"و" "" "$" "(u|v)" 
+"و" "" "" "(u|v1)" // waw, isol + init
+"ي‎" "" "$" "(i|j)" 
+"ي‎" "" "" "(i|j1)" // ya' isol

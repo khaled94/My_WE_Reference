@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="60" android:versionName="2.6.1" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" package="com.ucare.we" platformBuildVersionCode="31" platformBuildVersionName="12">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+    </queries>
+    <uses-feature android:glEsVersion="0x20000" android:required="true"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="com.ucare.we.App" android:allowBackup="false" android:hardwareAccelerated="true" android:largeHeap="true" android:supportsRtl="true" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/ic_launcher_round" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:requestLegacyExternalStorage="true">
+        <activity android:name="com.ucare.we.StoreLocatorActivity" android:exported="false"/>
+        <activity android:name="com.ucare.we.presentation.family.FamilySharedAddons.FamilySubscribeAddonsActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.family.FamilySharedAddons.FamilySelectAddonsActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.family.FamilySelectMoreBundleActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.family.CreateFamilyGroupConfirmationActivity" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.paybillnumbertype.PayBillNumberTypeActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="true"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCkSscpn1aDCpiUYrUPXeQzMeNWbrsTJvc"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <service android:name="com.ucare.we.firebasenotification.FCMJob" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.ucare.we.NetworkReciever" android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="@string/NOTIFICATION_ID"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/we_icon"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/colorPrimary"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.ucare.we.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity android:theme="@style/com_facebook_activity_theme" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:configChanges="screenSize|screenLayout|orientation|keyboardHidden|keyboard"/>
+        <activity android:name="com.facebook.CustomTabActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="fbconnect" android:host="cct.com.ucare.we"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/app_name" android:name="com.ucare.we.presentation.prepaid.MainActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="adjustPan"/>
+        <activity android:theme="@style/AppTheme_TranslucentStatusBar" android:name="com.ucare.we.HelpAndSupport_Activity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/app_name" android:name="com.ucare.we.presentation.postpaid.PostPaidMainActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="adjustPan"/>
+        <activity android:theme="@style/AppTheme_TranslucentStatusBar" android:name="com.ucare.we.presentation.auth.signin.SignInActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="adjustPan"/>
+        <activity android:theme="@style/AppTheme_TranslucentStatusBar" android:name="com.ucare.we.QuickLoginActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.TroubleOrServicesRequestTicketActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.TroubleTicketSelectTypeActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.SliderCoachMarkActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme_Splash" android:name="com.ucare.we.SplashActivity" android:exported="true" android:launchMode="singleTop" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.TicketsListActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.PayBillActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.GenericActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.UsageDetailsScreenActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.QueryTicketActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.SuspendAndResumeDurationSelectActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.presentation.offers.OffersAndExtraActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.EditTicketActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.RequestRouterUserNamePasswordActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.RequestDeviceActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.SuspendAndResumeSelectReasonAcitivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.ServiceTicketActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.NewRequestActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.SuspendAndResumeActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.DeviceTypeActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.NeedInstallationActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.presentation.search.SearchActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme_TranslucentStatusBar" android:name="com.ucare.we.presentation.auth.signup.SignUpActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden" android:windowSoftInputMode="adjustPan"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.SettingActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.ManagePlansActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.ManageBundleActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.SocialMediaActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.livechat.LiveChatActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.BalanceActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.presentation.paymenthistory.PaymentHistoryActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.BalanceTransferActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.ui.BalanceTransferConfirmationActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:label="" android:name="com.ucare.we.BalanceTransferSuccessfullyActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:label="" android:name="com.ucare.we.GpsEnableActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="" android:name="com.ucare.we.BalanceRechargeActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.BalanceRechargeCurrentNumberActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.BalanceRechargeCurrentNumberCardActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.BalanceRechargeNumberCreditActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.CreditCardInitActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.FAQActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.switchaccount.ChooseAccountActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.AssociatedNumbersActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.AddMoreBundlesActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.BalanceRechargeOtherNumberActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.BalanceRechargeSuccessfullyActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.addaccount.AddAccountActivity" android:launchMode="singleTop" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:name="com.ucare.we.ModifyPasswordActivity" android:launchMode="singleTop" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.ErrorHandlerActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.SuccessHandlerActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.RenewMainPlanActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.UnSubscribeFromBundleActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.ChangeMainPlanActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.GiftActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.SubscribeToBundleActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/app_name" android:name="com.ucare.we.PayBillMainActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:label="@string/app_name" android:name="com.ucare.we.PrepaidPaymentActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:name="com.ucare.we.PrivacyPolicyActivity"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.manageplanspostpaid.ManagePostPaidPlanActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:name="com.ucare.we.billservices.BillServicesActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.balancetransfer.BalanceTransferPostPaidActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.paybillpaymentmethod.PaymentMethodActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.paybillpostpaid.PayBillPostPaidActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.billsummary.BillSummaryActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.paymenthistory.PaymentHistoryPostPaidActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.paybillpostpaidvoucher.VoucherPayBillPostPaidActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.ucare.we.bankcardpaymentpostpaid.PostpaidPaymentActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:label="" android:name="com.ucare.we.manageplanspostpaid.MigrateToPlanConfirmationActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.paybillpostpaidvoucher.ResponseActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.paybillpostpaidvoucher.UnNavigateResponseActivity"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.presentation.offers.UnNavigateResponseActivity"/>
+        <activity android:name="com.ucare.we.helpandsupport.HelpAndSupportActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.chooserequest.ChooseRequestActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.submitnewrequest.SubmitNewRequestActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.requeststatus.RequestStatusActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.switchaccount.SwitchAccountPostPaidActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.confirmswitchingaccount.ConfirmSwitchingAccountActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.ucare.we.billlimit.BillLimitActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.preferrednumber.PreferedNumberActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.preferrednumber.ConfirmDeletePreferredNumberActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.preferrednumber.AddNewPreferredNumberConfirmActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.preferrednumber.AddNewPreferredNumberSuccessActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.familynumber.FamilyNumberActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.familynumber.ConfirmDeleteFamilyNumberActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.familynumber.AddNewFamilyNumberConfirmActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.familynumber.AddNewFamilyNumberSuccessActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.profile.myaccount.MyAccountActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.morebundle.MoreBundleActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.morebundle.ConfirmUnsubscribeFromMoreBundleActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.morebundle.SelectMoreBundlesActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.morebundle.FamilySelectMoreBundlesActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.billsummary.ConfirmDownloadingBillSummaryActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.ucare.we.morebundle.SubscribeToMoreBundleActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.morebundle.FamilySubscribeToMoreBundleActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.loginwithanotheraccount.LoginWithAnotherAccountActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.paybillpaymentmethod.HomeCollectionActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.dev.RequestStatusResponseActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.morebundle.ConfirmRenewalExtraActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.morebundle.SubscribeToAddOnConfirmation"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.presentation.switchaccount.CancelAccessConfirmationActivity"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.genericconfirmationscreen.GenericConfirmationActivity"/>
+        <activity android:name="com.ucare.we.balancetransferhistory.BalanceTransferHistoryActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.QuotaTransfer.QuotaTransferActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.corporatepostpaid.CorporatePostPaidMainActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.corporateprepaid.CorporatePrePaidMainActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.profile.postpaidprofile.DisableAutoPayConfirmationActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.profile.postpaidprofile.ShowCreditCardConfirmationCodeActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.ucare.we.presentation.profile.postpaidprofile.EnableAutoPayTopG.EnableAutoPayTopGActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.presentation.contactus.ContactUsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.USSDActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.adslpostpaid.ADSLPostPaidMainActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.adslprepaid.ADSLPrePaidMainActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.presentation.promisetopayandsalefny.PromiseToPayAndSalefnyActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.presentation.RegionalProducts.RegionalProductsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.corporateadslpostpaid.CorporateADSLPostPaidMainActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.corporateadslprepaid.CorporateADSLPrePaidMainActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.adslbalanceservices.ADSLBalanceServicesActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.manageplanspostpaid.ManagePlanMoreDetails" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.FamilyMoreDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.ussdddetails.USSDDetails" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.morebundle.FCMMSISDNPicker.FMCMSISDNPickerActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.fmcuser.FMCMainActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.fmcuser.FMCMSISDNSelector.FMCMSISDNSelector" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.inbox.NotificationInboxActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.autopayment.AutoPayment_RechargeBill_Activity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.inboxdetails.NotificationInboxDetailsActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.WebViewActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.chatwithus.ChatWithUsActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" android:hardwareAccelerated="false"/>
+        <activity android:name="com.ucare.we.presentation.wepay.WePayActivity" android:launchMode="singleTop" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.maps.MapsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.balancecalculator.BalanceCalculatorActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.requiredbalance.RequiredBalanceActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.presentation.success.SuccessRegisterActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <meta-data android:name="android.webkit.WebView.EnableSafeBrowsing" android:screenOrientation="portrait" android:value="false"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.success.SuccessRegisterActivity" android:screenOrientation="portrait" android:configChanges="screenSize|orientation|keyboardHidden"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.presentation.offers.UnNavigateResponseActivityFamily" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.paybillautheduser.PayBillForUserActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ucare.we.presentation.family.creategroup.CreateFamilyGroupPlansActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.family.groupinfo.ManageGroupActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.family.groupConsumptionSharedDetails.GroupDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.newHome.features.HomeActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme_NoActionBar" android:name="com.ucare.we.presentation.family.groupinfo.managemembers.ManageMembersActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.ucare.we.presentation.family.groupinfo.managebundle.ManageFamilyBundleActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.family.groupinfo.managemembers.addmember.AddMemberActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.family.groupinfo.GroupInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.presentation.genericconfirmation.GlobalConfirmationActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.family.offersAddons.FamilyOffersAddonsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.newHome.features.AnonymousNewHomeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.family.groupinfo.managemembers.managegrouppaymentrelation.ManageMemberLimitsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.family.groupinfo.managemembers.paymentlimit.PaymentLimitActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.family.groupinfo.managemembers.consumptionlimit.ConsumptionLimitActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.family.groupinfo.transferablepackages.TransferablePackagesActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.presentation.deactivatefbb.DeactivationConfirmationActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.presentation.deactivatefbb.DeactivationResponseActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme_AppCompat_TranslucentCoachMark" android:name="com.ucare.we.presentation.deactivatefbb.TermsConditionActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.ucare.we.presentation.storelocator.StoreLocatorActivity"/>
+        <service android:name="com.ucare.we.firebasenotification.MyPushService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <provider android:name="com.facebook.internal.FacebookInitProvider" android:exported="false" android:authorities="com.ucare.we.FacebookInitProvider"/>
+        <receiver android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.facebook.AuthenticationTokenManager.CurrentAuthenticationTokenChangedBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.jakewharton.processphoenix.ProcessPhoenix" android:process=":phoenix"/>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.google.firebase.auth.internal.FederatedSignInActivity" android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN" android:exported="true" android:excludeFromRecents="true" android:launchMode="singleTask"/>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.iid.FirebaseInstanceIdService" android:exported="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.ucare.we.firebaseinitprovider" android:initOrder="100"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.ucare.we.androidx-startup">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+    </application>
+</manifest>

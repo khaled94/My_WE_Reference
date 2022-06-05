@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <include layout="@layout/manage_number_layout"/>
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_medium" android:textColor="@color/color_black_new" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/___24sdp" android:text="@string/payment_history_six_months" android:textAlignment="viewStart" style="@style/MontserratSemiBold"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/___32ssp" android:layout_marginTop="@dimen/activity_padding">
+                <View android:layout_width="@dimen/_20sdp" android:layout_height="match_parent"/>
+                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_medium_new" android:textColor="@color/secondary_txt_color" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_first_month" android:background="@drawable/stroke_gray_border" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Junuary" android:layout_weight="1" style="@style/MontserratMedium"/>
+                <View android:layout_width="@dimen/_5sdp" android:layout_height="match_parent"/>
+                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_medium_new" android:textColor="@color/secondary_txt_color" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_second_month" android:background="@drawable/stroke_gray_border" android:layout_width="match_parent" android:layout_height="match_parent" android:text="February" android:layout_weight="1" style="@style/MontserratMedium"/>
+                <View android:layout_width="@dimen/_5sdp" android:layout_height="match_parent"/>
+                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_medium_new" android:textColor="@color/secondary_txt_color" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_third_month" android:background="@drawable/stroke_gray_border" android:layout_width="match_parent" android:layout_height="match_parent" android:text="March" android:layout_weight="1" style="@style/MontserratMedium"/>
+                <View android:layout_width="@dimen/_5sdp" android:layout_height="match_parent"/>
+                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_medium_new" android:textColor="@color/secondary_txt_color" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_fourth_month" android:background="@drawable/stroke_gray_border" android:layout_width="match_parent" android:layout_height="match_parent" android:text="April" android:layout_weight="1" style="@style/MontserratMedium"/>
+                <View android:layout_width="@dimen/_5sdp" android:layout_height="match_parent"/>
+                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_medium_new" android:textColor="@color/secondary_txt_color" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_fifth_month" android:background="@drawable/stroke_gray_border" android:layout_width="match_parent" android:layout_height="match_parent" android:text="May" android:layout_weight="1" style="@style/MontserratMedium"/>
+                <View android:layout_width="@dimen/_5sdp" android:layout_height="match_parent"/>
+                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_medium_new" android:textColor="@color/secondary_txt_color" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_sixth_month" android:background="@drawable/stroke_gray_border" android:layout_width="match_parent" android:layout_height="match_parent" android:text="June" android:layout_weight="1" style="@style/MontserratMedium"/>
+                <View android:layout_width="@dimen/_20sdp" android:layout_height="match_parent"/>
+            </LinearLayout>
+            <FrameLayout android:id="@+id/content" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="27dp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

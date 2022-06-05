@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textColor="@color/colorPrimary" android:gravity="center" android:id="@+id/tv_number" android:layout_width="wrap_content" android:layout_height="40dp" android:paddingStart="@dimen/margin_15" android:paddingEnd="@dimen/margin_15" android:layout_alignParentStart="true" style="@style/MyriadProBold"/>
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textColor="@color/colorPrimary" android:gravity="center" android:id="@+id/tv_remove_number" android:layout_width="wrap_content" android:layout_height="40dp" android:text="@string/remove_account" android:paddingStart="@dimen/margin_15" android:paddingEnd="@dimen/margin_15" android:layout_alignParentEnd="true" style="@style/MyriadProBold"/>
+    </RelativeLayout>
+    <View android:background="@color/gray" android:layout_width="match_parent" android:layout_height="1dp"/>
+</LinearLayout>

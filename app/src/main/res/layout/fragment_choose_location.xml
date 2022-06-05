@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/margin_20">
+    <RelativeLayout android:id="@+id/rlSelectCity" android:background="@color/white" android:paddingTop="@dimen/margin_25" android:paddingBottom="@dimen/margin_25" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/margin_30" android:paddingEnd="@dimen/margin_30">
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/CodGray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/select_city" android:layout_centerVertical="true" android:layout_alignParentStart="true" style="@style/MyriadProBold"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/CodGray" android:id="@+id/tvSelectedCity" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="        " style="@style/MyriadProRegular"/>
+            <ImageView android:background="@drawable/store_locator_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:backgroundTint="@color/CodGray"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rlSelectArea" android:background="@color/store_select_area_background_color" android:paddingTop="@dimen/margin_25" android:paddingBottom="@dimen/margin_25" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/margin_30" android:paddingEnd="@dimen/margin_30">
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/CodGray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/select_area" android:layout_centerVertical="true" android:layout_alignParentStart="true" style="@style/MyriadProBold"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/CodGray" android:id="@+id/tvSelectedArea" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="        " style="@style/MyriadProRegular"/>
+            <ImageView android:background="@drawable/store_locator_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:backgroundTint="@color/CodGray"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <Button android:textSize="@dimen/text_size_15sp" android:textColor="@color/white" android:id="@+id/btnSearch" android:background="@drawable/new_rounded_corner_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_30" android:layout_marginBottom="@dimen/margin_30" android:text="@string/search" android:layout_marginStart="@dimen/margin_40" android:layout_marginEnd="@dimen/margin_40"/>
+</LinearLayout>

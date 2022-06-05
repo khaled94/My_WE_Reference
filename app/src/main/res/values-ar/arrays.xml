@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="add_image_options">
+        <item>إلتقاط صورة</item>
+        <item>إختيار من المعرض</item>
+    </array>
+    <array name="limitTypes">
+        <item>المبلغ</item>
+        <item>النسبة</item>
+    </array>
+    <array name="months_names_array">
+        <item>يناير</item>
+        <item>فبراير</item>
+        <item>مارس</item>
+        <item>أبريل</item>
+        <item>مايو</item>
+        <item>يونيه</item>
+        <item>يوليو</item>
+        <item>أغسطس</item>
+        <item>سبتمبر</item>
+        <item>أكتوبر</item>
+        <item>نوفمبر</item>
+        <item>ديسمبر</item>
+    </array>
+    <array name="regionalAddonsSpinArray">
+        <item>كل الانظمة</item>
+        <item>باقات إضافية مميزة</item>
+    </array>
+    <array name="regionalManagePlanSpinArray">
+        <item>كل الانظمة</item>
+        <item>باقات مميزة</item>
+    </array>
+</resources>

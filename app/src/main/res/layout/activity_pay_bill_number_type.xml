@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/linearLayout" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_medium" android:textColor="@color/black_light" android:layout_gravity="center_horizontal" android:id="@+id/tv_choose_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25dp" android:text="@string/choose_target_number" style="@style/MyriadProRegular"/>
+                <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/ll_current_number" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fab_margin">
+                    <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="@dimen/single_space_margin" android:layout_marginRight="@dimen/single_space_margin" android:layout_weight="1">
+                        <ImageView android:gravity="end" android:layout_gravity="end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentEnd="true" app:srcCompat="@drawable/current_number"/>
+                    </RelativeLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.5">
+                        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/current_number_text_size" android:textColor="@color/colorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/current_number" style="@style/MyriadProSemiBold"/>
+                        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textColor="@color/colorPrimary" android:id="@+id/current_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="01551357258" style="@style/MyriadProRegular"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:id="@+id/v_current_number" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="@dimen/single_space_margin"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/ll_my_numbers" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fab_margin">
+                    <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="@dimen/single_space_margin" android:layout_marginRight="@dimen/single_space_margin" android:layout_weight="1">
+                        <ImageView android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" app:srcCompat="@drawable/my_numbers"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1.5">
+                        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textColor="@color/colorPrimary" android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_numbers" android:layout_centerVertical="true" android:layout_alignParentStart="true" style="@style/MyriadProSemiBold"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <View android:id="@+id/v_my_numbers" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="@dimen/single_space_margin"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/ll_other_number" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fab_margin">
+                    <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="@dimen/single_space_margin" android:layout_marginRight="@dimen/single_space_margin" android:layout_weight="1">
+                        <ImageView android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" app:srcCompat="@drawable/other_number"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1.5">
+                        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textColor="@color/colorPrimary" android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/other_number" android:layout_centerVertical="true" android:layout_alignParentStart="true" style="@style/MyriadProSemiBold"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <View android:id="@+id/v_other_numbers" android:background="@color/gray" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="@dimen/single_space_margin"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/ll_pay_landlines_bill" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fab_margin">
+                    <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="@dimen/single_space_margin" android:layout_marginRight="@dimen/single_space_margin" android:layout_weight="1">
+                        <ImageView android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="25dp" android:layout_height="25dp" android:scaleType="fitXY" android:layout_centerVertical="true" android:layout_alignParentEnd="true" app:srcCompat="@drawable/ic_pay_landline_bill"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1.5">
+                        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textColor="@color/colorPrimary" android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pay_your_landlines_bill" android:layout_centerVertical="true" android:layout_alignParentStart="true" style="@style/MyriadProSemiBold"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

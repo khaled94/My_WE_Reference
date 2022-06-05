@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include android:id="@+id/content" layout="@layout/usage_details_content"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+    <View android:layout_gravity="bottom" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="@dimen/___35sdp"/>
+    <Button android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:textSize="@dimen/___13ssp" android:textColor="@color/white" android:layout_gravity="bottom" android:id="@+id/btnAddMoreExtra" android:background="@drawable/new_rounded_corner_button" android:padding="@dimen/___5sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:layout_marginBottom="32dp" android:text="@string/add_more_bundles1" android:textAllCaps="false" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" style="@style/MyriadProSemiBold"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingLeft="24dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.ucare.we.view.AppCompatTextView android:textColor="#484848" android:id="@+id/text1" android:paddingBottom="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="Anonymous ADSL payment"/>
+    <com.ucare.we.view.AppCompatTextView android:textColor="#97a0a7" android:id="@+id/text2" android:paddingBottom="12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Anonymous ADSL payment"/>
+    <View android:id="@+id/sep" android:background="#e8e8e8" android:layout_width="match_parent" android:layout_height="1dp"/>
+</LinearLayout>

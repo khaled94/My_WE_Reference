@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_25" android:layout_alignParentBottom="true">
+        <Button android:textColor="@color/white" android:gravity="center" android:id="@+id/recharge" android:background="@drawable/new_rounded_corner_button" android:paddingTop="@dimen/button_padding" android:paddingBottom="@dimen/button_padding" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin_5" android:text="@string/recharge" android:layout_weight="1" android:textAllCaps="false" android:textAlignment="center" android:layout_marginEnd="@dimen/margin_5"/>
+        <Button android:textColor="@color/white" android:gravity="center" android:id="@+id/reactivte" android:background="@drawable/new_rounded_corner_button" android:paddingTop="@dimen/button_padding" android:paddingBottom="@dimen/button_padding" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_5" android:text="@string/reactivate" android:layout_weight="1" android:textAllCaps="false" android:textAlignment="center" android:layout_marginStart="5dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/fab_margin">
+            <include layout="@layout/manage_number_layout"/>
+            <com.ucare.we.view.AppCompatTextView android:textSize="12sp" android:textColor="@color/grayColorFont" android:gravity="start" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/pleaseEnterAmount"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_20">
+                <com.ucare.we.view.AppCompatTextView android:textColor="@color/gb_free" android:id="@+id/tvBalanceText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/balance" app:layout_constraintBottom_toBottomOf="@+id/etBalance" app:layout_constraintEnd_toEndOf="@+id/tvAmountToPay" app:layout_constraintTop_toTopOf="@+id/etBalance"/>
+                <EditText android:id="@+id/etBalance" android:background="@drawable/gray_rounded_boarders" android:layout_width="100dp" android:layout_height="35dp" android:layout_weight="1" android:inputType="number" android:layout_marginStart="10dp" app:layout_constraintStart_toEndOf="@+id/tvBalanceText" app:layout_constraintTop_toTopOf="0"/>
+                <ImageView android:id="@+id/ivConverterIcon" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginTop="10dp" app:layout_constraintEnd_toEndOf="@+id/etBalance" app:layout_constraintStart_toStartOf="@+id/etBalance" app:layout_constraintTop_toBottomOf="@+id/etBalance" app:srcCompat="@drawable/ic_transfer"/>
+                <EditText android:id="@+id/ivAmountToPay" android:background="@drawable/gray_rounded_boarders" android:layout_width="100dp" android:layout_height="35dp" android:layout_marginTop="@dimen/margin_10" android:layout_weight="1" android:inputType="number" android:layout_marginStart="10dp" app:layout_constraintStart_toEndOf="@+id/tvAmountToPay" app:layout_constraintTop_toBottomOf="@+id/ivConverterIcon"/>
+                <com.ucare.we.view.AppCompatTextView android:textColor="@color/gb_free" android:id="@+id/tvAmountToPay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/amountToPay" app:layout_constraintBottom_toBottomOf="@+id/ivAmountToPay" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/ivAmountToPay"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button android:textColor="@color/white" android:background="@drawable/new_rounded_corner_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="20dp" android:text="@string/recharge" android:textAllCaps="false"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

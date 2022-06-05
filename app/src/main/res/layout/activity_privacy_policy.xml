@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="left" android:orientation="vertical" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_large_new" android:textColor="@color/CodGray" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/privacy_policy_text" android:textAlignment="viewStart"/>
+                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_large_new" android:textColor="@color/CodGray" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/privacy_policy_part_two" android:textAlignment="viewStart"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

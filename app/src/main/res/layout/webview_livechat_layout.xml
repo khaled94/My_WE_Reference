@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/toolbar_webview"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/swipeContainer" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.core.widget.NestedScrollView android:scrollbarAlwaysDrawHorizontalTrack="true" android:scrollbars="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:fadeScrollbars="false">
+            <WebView android:id="@+id/live_chat_view" android:padding="@dimen/___10sdp" android:scrollbars="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:nestedScrollingEnabled="true"/>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

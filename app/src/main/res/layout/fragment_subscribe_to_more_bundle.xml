@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_small_new" android:textColor="@color/colorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vat_text" android:layout_marginStart="24dp" android:layout_marginEnd="24dp"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_subscribe_bundles" android:padding="@dimen/___10sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/___10sdp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+</LinearLayout>

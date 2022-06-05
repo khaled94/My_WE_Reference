@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@+id/Rly_noAddons" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/dimen_16sp" android:textColor="@color/dark_gray" android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_available_add_on" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvAddons" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_marginStart="@dimen/dimen_8dp" android:layout_marginEnd="@dimen/dimen_8dp" android:nestedScrollingEnabled="false"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

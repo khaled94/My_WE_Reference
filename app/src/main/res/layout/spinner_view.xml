@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatButton android:textSize="@dimen/awesomeSpinner_hintTextSize" android:textColor="@android:color/darker_gray" android:gravity="center" android:id="@+id/awesomeSpinner_hintButton" android:paddingLeft="8dp" android:paddingTop="0dp" android:paddingRight="8dp" android:paddingBottom="0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="انتخاب کنید" android:textAllCaps="false" android:elevation="0dp" style="@style/Widget.AppCompat.Button.Borderless"/>
+    <ImageView android:id="@+id/awesomeSpinner_downArrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:src="@drawable/ic_arrow_drop_down" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+    <LinearLayout android:background="?android:attr/listDivider" android:layout_width="match_parent" android:layout_height="1dp" android:layout_alignBottom="@+id/awesomeSpinner_hintButton"/>
+    <com.isapanah.awesomespinner.spinnerDefaultSelection android:id="@+id/awesomeSpinner_spinner" android:layout_width="match_parent" android:layout_height="0dp" android:layout_alignBottom="@+id/awesomeSpinner_hintButton" android:spinnerMode="dropdown" style="@style/Widget.AppCompat.Spinner.Underlined"/>
+</merge>

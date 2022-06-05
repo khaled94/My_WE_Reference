@@ -1,0 +1,107 @@
+package defpackage;
+
+import com.google.crypto.tink.shaded.protobuf.InvalidProtocolBufferException;
+import defpackage.cdk;
+
+/* renamed from: ccj  reason: default package */
+/* loaded from: classes2.dex */
+public final class ccj extends cdk<ccj, a> implements cck {
+    private static final ccj DEFAULT_INSTANCE;
+    private static volatile cel<ccj> PARSER;
+
+    private ccj() {
+    }
+
+    public static ccj a(ccu ccuVar, cdb cdbVar) throws InvalidProtocolBufferException {
+        return (ccj) cdk.a(DEFAULT_INSTANCE, ccuVar, cdbVar);
+    }
+
+    /* renamed from: ccj$a */
+    /* loaded from: classes2.dex */
+    public static final class a extends cdk.a<ccj, a> implements cck {
+        /* synthetic */ a(byte b) {
+            this();
+        }
+
+        private a() {
+            super(ccj.DEFAULT_INSTANCE);
+        }
+    }
+
+    /* renamed from: ccj$1  reason: invalid class name */
+    /* loaded from: classes2.dex */
+    static /* synthetic */ class AnonymousClass1 {
+        static final /* synthetic */ int[] a;
+
+        static {
+            int[] iArr = new int[cdk.g.a().length];
+            a = iArr;
+            try {
+                iArr[cdk.g.d - 1] = 1;
+            } catch (NoSuchFieldError unused) {
+            }
+            try {
+                a[cdk.g.e - 1] = 2;
+            } catch (NoSuchFieldError unused2) {
+            }
+            try {
+                a[cdk.g.c - 1] = 3;
+            } catch (NoSuchFieldError unused3) {
+            }
+            try {
+                a[cdk.g.f - 1] = 4;
+            } catch (NoSuchFieldError unused4) {
+            }
+            try {
+                a[cdk.g.g - 1] = 5;
+            } catch (NoSuchFieldError unused5) {
+            }
+            try {
+                a[cdk.g.a - 1] = 6;
+            } catch (NoSuchFieldError unused6) {
+            }
+            try {
+                a[cdk.g.b - 1] = 7;
+            } catch (NoSuchFieldError unused7) {
+            }
+        }
+    }
+
+    @Override // defpackage.cdk
+    public final Object a(int i) {
+        switch (AnonymousClass1.a[i - 1]) {
+            case 1:
+                return new ccj();
+            case 2:
+                return new a((byte) 0);
+            case 3:
+                return a(DEFAULT_INSTANCE, "\u0000\u0000", (Object[]) null);
+            case 4:
+                return DEFAULT_INSTANCE;
+            case 5:
+                cel<ccj> celVar = PARSER;
+                if (celVar == null) {
+                    synchronized (ccj.class) {
+                        celVar = PARSER;
+                        if (celVar == null) {
+                            celVar = new cdk.b<>(DEFAULT_INSTANCE);
+                            PARSER = celVar;
+                        }
+                    }
+                }
+                return celVar;
+            case 6:
+                return (byte) 1;
+            case 7:
+                return null;
+            default:
+                throw new UnsupportedOperationException();
+        }
+    }
+
+    static {
+        ccj ccjVar = new ccj();
+        DEFAULT_INSTANCE = ccjVar;
+        cdk.a(ccj.class, ccjVar);
+    }
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="add_image_options">
+        <item>Take a picture</item>
+        <item>Choose a picture</item>
+    </array>
+    <array name="limitTypes">
+        <item>Amount</item>
+        <item>Percent</item>
+    </array>
+    <array name="months_names_array">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sept</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </array>
+    <array name="regionalAddonsSpinArray">
+        <item>All Add-Ons</item>
+        <item>Special Add-Ons</item>
+    </array>
+    <array name="regionalManagePlanSpinArray">
+        <item>All Plans</item>
+        <item>Special plans</item>
+    </array>
+    <array name="tutorial_body_postpaid_items">
+        <item>@string/welcome_home_body</item>
+        <item>@string/accounts_body</item>
+        <item>@string/main_plan_body</item>
+        <item>@string/main_plan_usage_body</item>
+        <item>@string/outstanding_body</item>
+        <item>@string/pay_bill_body</item>
+        <item>@string/manage_plan_body</item>
+        <item>@string/extra_addons_body</item>
+        <item>@string/points_body</item>
+        <item>@string/quick_access_body</item>
+        <item>@string/chatbot_body</item>
+        <item>@string/more_body</item>
+    </array>
+    <array name="tutorial_body_prepaid_items">
+        <item>@string/welcome_home_body</item>
+        <item>@string/accounts_body</item>
+        <item>@string/main_plan_body</item>
+        <item>@string/main_plan_usage_body</item>
+        <item>@string/current_balance_body</item>
+        <item>@string/balance_recharge_body</item>
+        <item>@string/manage_plan_body</item>
+        <item>@string/extra_addons_body</item>
+        <item>@string/points_body</item>
+        <item>@string/quick_access_body</item>
+        <item>@string/chatbot_body</item>
+        <item>@string/more_body</item>
+    </array>
+    <array name="tutorial_title_postpaid_items">
+        <item>@string/welcome_home_title</item>
+        <item>@string/accounts_title</item>
+        <item>@string/main_plan_title</item>
+        <item>@string/main_plan_usage_title</item>
+        <item>@string/outstanding_title</item>
+        <item>@string/pay_bill_title</item>
+        <item>@string/manage_plan_title</item>
+        <item>@string/extra_addons_title</item>
+        <item>@string/points_title</item>
+        <item>@string/quick_access_title</item>
+        <item>@string/chatbot_title</item>
+        <item>@string/more_title</item>
+    </array>
+    <array name="tutorial_title_prepaid_items">
+        <item>@string/welcome_home_title</item>
+        <item>@string/accounts_title</item>
+        <item>@string/main_plan_title</item>
+        <item>@string/main_plan_usage_title</item>
+        <item>@string/current_balance_title</item>
+        <item>@string/balance_recharge_title</item>
+        <item>@string/manage_plan_title</item>
+        <item>@string/extra_addons_title</item>
+        <item>@string/points_title</item>
+        <item>@string/quick_access_title</item>
+        <item>@string/chatbot_title</item>
+        <item>@string/more_title</item>
+    </array>
+</resources>

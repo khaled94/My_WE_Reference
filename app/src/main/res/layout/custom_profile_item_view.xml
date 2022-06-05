@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="100dp">
+        <ImageView android:id="@+id/ivIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="16dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@+id/linearLayoutCompat" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="16dp" app:layout_constraintBottom_toBottomOf="@+id/ivIcon" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/ivIcon" app:layout_constraintTop_toTopOf="@+id/ivIcon">
+            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___11sdp" android:textColor="#313131" android:id="@+id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="welcome to egypt" android:layout_weight="1" android:fontFamily="@font/montserrat_medium"/>
+                <com.ucare.we.view.AppCompatTextView android:textSize="11sp" android:textColor="#702283" android:gravity="center" android:layout_gravity="center" android:id="@+id/btnUpdate" android:background="#0000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAllCaps="false" android:fontFamily="@font/montserrat_medium" app:fontFamily="@font/montserrat_semi_bold"/>
+                <ImageView android:layout_gravity="center" android:id="@+id/ivArrow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="4dp" android:layout_marginEnd="4dp" app:srcCompat="@drawable/ic_forward_arrow"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___12sdp" android:textColor="#707070" android:id="@+id/tvSubTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:fontFamily="@font/montserrat_medium"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

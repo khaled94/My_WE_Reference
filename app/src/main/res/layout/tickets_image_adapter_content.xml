@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="56dp" android:layout_height="56dp" android:layout_marginLeft="@dimen/margin_10" android:layout_marginStart="@dimen/margin_10">
+    <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/circleView" android:layout_width="@dimen/margin_50" android:layout_height="@dimen/margin_50" android:layout_above="@+id/cloaseTextView" app:srcCompat="@drawable/ico_refresh"/>
+    <com.ucare.we.view.AppCompatTextView android:textSize="25sp" android:textStyle="normal" android:textColor="@color/colorPrimary" android:layout_gravity="end|top" android:id="@+id/cloaseTextView1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="x"/>
+    <ImageView android:layout_gravity="end|top" android:id="@+id/cloaseTextView" android:background="@drawable/ic_close_black_24dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:backgroundTint="@color/black_light"/>
+</FrameLayout>

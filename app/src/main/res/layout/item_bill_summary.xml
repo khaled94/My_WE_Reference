@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/rlItemContainer" android:background="@color/white" android:padding="@dimen/margin_10" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_large_new" android:textColor="@color/black_light" android:gravity="start" android:id="@+id/tvBillSummaryDate" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/number_number" android:layout_weight="1" style="@style/MyriadProSemiBold"/>
+    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_large_new" android:textColor="@color/black_light" android:gravity="start" android:id="@+id/tvBillSummaryPeriod" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/number_number" android:layout_weight="1" style="@style/MyriadProSemiBold"/>
+    <ImageView android:gravity="end" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" app:srcCompat="@drawable/ic_chevron_right_black_24dp"/>
+</LinearLayout>

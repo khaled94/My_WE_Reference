@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+    <com.ucare.we.view.AppCompatTextView android:id="@+id/tvContent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="2dp" android:paddingStart="25sp" android:paddingEnd="15sp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

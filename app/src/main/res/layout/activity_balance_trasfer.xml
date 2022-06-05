@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include layout="@layout/manage_number_layout"/>
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_medium" android:textColor="@color/black_light" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/fab_margin" android:text="@string/balance_number_tranfer" style="@style/MyriadProRegularLeft"/>
+            <AutoCompleteTextView android:textSize="@dimen/edit_text_hint_size" android:id="@+id/et_mobile" android:background="@drawable/edit_text_underline_new" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginLeft="@dimen/fab_margin" android:layout_marginRight="@dimen/fab_margin" android:hint="@string/number_number" android:maxLength="11" android:digits="1234567890٠١٢٣٤٥٦٧٨٩" android:inputType="number" style="@style/MyriadProRegularLeft"/>
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_medium" android:textColor="@color/black_light" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/fab_margin" android:text="@string/balance_amount_transfer" style="@style/MyriadProRegularLeft"/>
+            <EditText android:textSize="@dimen/edit_text_hint_size" android:id="@+id/et_amount" android:background="@drawable/edit_text_underline_new" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginLeft="@dimen/fab_margin" android:layout_marginRight="@dimen/fab_margin" android:hint="@string/amount_transfer" android:digits="1234567890٠١٢٣٤٥٦٧٨٩" android:inputType="number" style="@style/MyriadProRegularLeft"/>
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/fab_margin" android:text="@string/balance_amount" style="@style/MyriadProRegularLeft"/>
+            <Button android:textColor="@color/white" android:id="@+id/btn_transfer" android:background="@drawable/new_rounded_corner_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/button_left_margin" android:text="@string/btn_next" android:textAllCaps="false"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

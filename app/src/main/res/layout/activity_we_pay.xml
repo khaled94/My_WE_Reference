@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layoutDirection="locale">
+    <include layout="@layout/toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true" app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@+id/container" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="@dimen/___16sdp" android:layout_marginEnd="@dimen/___16sdp">
+            <com.ucare.we.view.AppCompatTextView android:textSize="20sp" android:textColor="@color/black_light" android:id="@+id/tvAboutTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/aboutWePay" android:textAlignment="viewStart"/>
+            <com.ucare.we.view.AppCompatTextView android:textSize="15dp" android:textColor="@color/black_light" android:id="@+id/tvAboutContent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/aboutWePay"/>
+            <ImageView android:textSize="15dp" android:textColor="@color/black_light" android:id="@+id/tvGetItOnGooglePlay" android:visibility="gone" android:layout_width="150dp" android:layout_height="55dp" android:layout_margin="10dp" android:scaleType="fitXY" android:text="@string/aboutWePay" app:srcCompat="@drawable/ic_get_on_google_play"/>
+            <com.ucare.we.view.AppCompatTextView android:textSize="20sp" android:textColor="@color/black_light" android:id="@+id/tvFaq" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/faqs"/>
+            <ExpandableListView android:id="@+id/expandableListView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="6dp" android:groupIndicator="@null" android:divider="@android:color/darker_gray" android:dividerHeight="0.5dp" android:childIndicatorStart="@null"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvFaq" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

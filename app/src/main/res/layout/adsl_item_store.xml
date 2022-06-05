@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:paddingTop="@dimen/margin_15" android:paddingBottom="@dimen/margin_15" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/black_light" android:id="@+id/tv_store_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cairo festival city" android:layout_marginStart="@dimen/margin_25" android:layout_marginEnd="@dimen/margin_25" style="@style/MyriadProSemiBold"/>
+    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:id="@+id/tv_store_address" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Eltaganoa el khames new cairo" android:layout_marginStart="@dimen/margin_25" android:layout_marginEnd="@dimen/margin_25" style="@style/MyriadProRegularLeft"/>
+    <View android:background="@color/store_separator_color" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="10dp"/>
+</LinearLayout>

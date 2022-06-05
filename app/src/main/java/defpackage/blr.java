@@ -1,0 +1,17 @@
+package defpackage;
+
+/* renamed from: blr  reason: default package */
+/* loaded from: classes2.dex */
+final /* synthetic */ class blr implements box {
+    static final box a = new blr();
+
+    private blr() {
+    }
+
+    @Override // defpackage.box
+    public final Object a() {
+        Integer valueOf;
+        valueOf = Integer.valueOf((int) axm.E());
+        return valueOf;
+    }
+}

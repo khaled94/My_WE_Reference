@@ -1,0 +1,97 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+"αυ" "" "$" "af"  // "av" before vowels and voiced consonants, "af" elsewhere
+"αυ" "" "(κ|π|σ|τ|φ|θ|χ|ψ)" "af" 
+"αυ" "" "" "av" 
+"ευ" "" "$" "ef" // "ev" before vowels and voiced consonants, "ef" elsewhere
+"ευ" "" "(κ|π|σ|τ|φ|θ|χ|ψ)" "ef" 
+"ευ" "" "" "ev" 
+"ηυ" "" "$" "if" // "iv" before vowels and voiced consonants, "if" elsewhere
+"ηυ" "" "(κ|π|σ|τ|φ|θ|χ|ψ)" "if" 
+"ηυ" "" "" "iv" 
+"ου" "" "" "u"  // [u:]
+
+"αι" "" "" "aj"  // modern [e]
+"ει" "" "" "ej" // modern [i]
+"οι" "" "" "oj" // modern [i]
+"ωι" "" "" "oj" 
+"ηι" "" "" "ej" 
+"υι" "" "" "i" // modern Greek "i"
+
+"γγ" "(ε|ι|η|α|ο|ω|υ)" "(ε|ι|η)" "(nj|j)"
+"γγ" "" "(ε|ι|η)" "j"
+"γγ" "(ε|ι|η|α|ο|ω|υ)" "" "(ng|g)"
+"γγ" "" "" "g" 
+"γκ" "^" "" "g"
+"γκ" "(ε|ι|η|α|ο|ω|υ)" "(ε|ι|η)" "(nj|j)"
+"γκ" "" "(ε|ι|η)" "j"
+"γκ" "(ε|ι|η|α|ο|ω|υ)" "" "(ng|g)"
+"γκ" "" "" "g" 
+"γι" "" "(α|ο|ω|υ)" "j"
+"γι" "" "" "(gi|i)"
+"γε" "" "(α|ο|ω|υ)" "j"
+"γε" "" "" "(ge|je)"
+
+"κζ" "" "" "gz"
+"τζ" "" "" "dz"
+"σ" "" "(β|γ|δ|μ|ν|�?)" "z"
+
+"μβ" "" "" "(mb|b)"
+"μπ" "^" "" "b"
+"μπ" "(ε|ι|η|α|ο|ω|υ)" "" "mb"
+"μπ" "" "" "b" // after any consonant
+"ντ" "^" "" "d"
+"ντ" "(ε|ι|η|α|ο|ω|υ)" "" "(nd|nt)" // Greek is "nd" 
+"ντ" "" "" "(nt|d)" // Greek is "d" after any consonant
+
+"ά" "" "" "a"
+"έ" "" "" "e"
+"ή" "" "" "(i|e)" 
+"ί" "" "" "i"   
+"ό" "" "" "o"
+"�?" "" "" "(Q|i|u)"
+"ώ" "" "" "o"
+"ΰ" "" "" "(Q|i|u)"
+"ϋ" "" "" "(Q|i|u)"
+"ϊ" "" "" "j"
+
+"α" "" "" "a"
+"β" "" "" "(v|b)" // modern "v", old "b"
+"γ" "" "" "g" 
+"δ" "" "" "d"    // modern like "th" in English "them", old "d"
+"ε" "" "" "e"
+"ζ" "" "" "z"
+"η" "" "" "(i|e)" // modern "i", old "e:"
+"ι" "" "" "i"
+"κ" "" "" "k"
+"λ" "" "" "l"
+"μ" "" "" "m"
+"ν" "" "" "n"
+"ξ" "" "" "ks"
+"ο" "" "" "o"
+"π" "" "" "p"
+"�?" "" "" "r"
+"σ" "" "" "s"
+"ς" "" "" "s"
+"τ" "" "" "t" 
+"υ" "" "" "(Q|i|u)" // modern "i", old like German "ü"
+"φ" "" "" "f" 
+"θ" "" "" "t" // old greek like "th" in English "theme"
+"χ" "" "" "x"
+"ψ" "" "" "ps"
+"ω" "" "" "o"

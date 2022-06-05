@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:padding="@dimen/fab_margin" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/button_left_margin" android:layout_marginRight="@dimen/button_left_margin" android:layout_marginHorizontal="@dimen/button_left_margin">
+                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_medium" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/social_media_desc" style="@style/MyriadProRegular"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fab_margin" android:layout_marginBottom="@dimen/fab_margin" android:layout_marginVertical="@dimen/fab_margin">
+                    <ImageButton android:id="@+id/imageButtonGooglePlus" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" app:srcCompat="@drawable/google"/>
+                    <ImageButton android:id="@+id/imageButtonLinkedIn" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" app:srcCompat="@drawable/linkedin"/>
+                    <ImageButton android:id="@+id/imageButtonTwitter" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" app:srcCompat="@drawable/twitter"/>
+                    <ImageButton android:id="@+id/imageButtonFacebook" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" app:srcCompat="@drawable/facebook"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fab_margin" android:layout_marginBottom="@dimen/fab_margin" android:layout_marginVertical="@dimen/fab_margin">
+                    <ImageButton android:id="@+id/imageButtonInstagram" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" app:srcCompat="@drawable/instagram"/>
+                    <ImageButton android:id="@+id/imageButtonYoutube" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" app:srcCompat="@drawable/youtube"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="ring" android:innerRadiusRatio="@dimen/slider_progress_ratio" android:useLevel="true" android:thickness="@dimen/slider_progress_thickness">
+            <gradient android:startColor="#ba3292" android:endColor="#4b53a3" android:angle="90" android:type="linear" android:gradientRadius="90" android:centerColor="#522e90"/>
+        </shape>
+        <corners android:radius="25dp"/>
+    </item>
+</layer-list>

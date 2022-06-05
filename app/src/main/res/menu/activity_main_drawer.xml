@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/grp6">
+        <item android:icon="@drawable/nav_drawer_pay_bill" android:id="@+id/nav_pay_bill" android:visible="false" android:title="@string/pay_bill"/>
+    </group>
+    <group android:id="@+id/grp1">
+        <item android:icon="@drawable/icon_chat" android:id="@+id/nav_live_chat" android:title="@string/live_chat"/>
+    </group>
+    <group android:id="@+id/grp2">
+        <item android:icon="@drawable/faq_icon" android:id="@+id/nav_faq" android:title="@string/faq"/>
+    </group>
+    <group android:id="@+id/grp3">
+        <item android:icon="@drawable/settings" android:id="@+id/nav_settings" android:title="@string/settings"/>
+    </group>
+    <group android:id="@+id/grp4">
+        <item android:icon="@drawable/icon_follow" android:id="@+id/nav_follow" android:title="@string/follow_us"/>
+    </group>
+    <group android:id="@+id/grp5">
+        <item android:icon="@drawable/logout_icon" android:id="@+id/nav_logout" android:title="@string/logout"/>
+    </group>
+</menu>

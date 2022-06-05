@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/margin_50">
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_medium_new" android:textColor="@color/color_black_new" android:id="@+id/txtPaymentDate" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/date" android:layout_weight="1" android:layout_centerVertical="true" android:textAlignment="viewStart" android:layout_alignParentStart="true" style="@style/MontserratRegular"/>
+        <View android:background="@color/gray" android:visibility="gone" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginStart="@dimen/margin_10" android:layout_toEndOf="@+id/txtPaymentDate"/>
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_medium_new" android:textColor="@color/color_black_new" android:id="@+id/txtPaymentAmount" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/amount_in_egp" android:layout_weight="1" android:layout_centerVertical="true" android:textAlignment="viewStart" android:layout_toEndOf="@+id/txtPaymentDate" style="@style/MontserratMedium"/>
+        <View android:background="@color/gray" android:visibility="gone" android:layout_width="1dp" android:layout_height="match_parent" android:layout_marginStart="@dimen/margin_10" android:layout_toEndOf="@+id/txtPaymentAmount"/>
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_medium_new" android:textColor="@color/color_black_new" android:id="@+id/txtPaymentChannel" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/payment_channel" android:layout_weight="1" android:layout_centerVertical="true" android:textAlignment="viewStart" android:layout_toEndOf="@+id/txtPaymentAmount" style="@style/MontserratRegular"/>
+    </LinearLayout>
+    <View android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="1dp"/>
+</LinearLayout>

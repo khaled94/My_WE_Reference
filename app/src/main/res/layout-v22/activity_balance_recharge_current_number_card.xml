@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <include layout="@layout/manage_number_layout"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="@dimen/___20sdp" android:layout_marginEnd="@dimen/___20sdp">
+                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___14ssp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___20sdp" android:text="@string/please_scratch_and_fill" android:textAlignment="viewStart" style="@style/MyriadProRegularLeft"/>
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/til_card_number" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___20sdp" app:errorEnabled="false" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                    <com.google.android.material.textfield.TextInputEditText android:textSize="@dimen/___14ssp" android:textColor="@color/color_black_new" android:id="@+id/et_card_number" android:background="@drawable/text_input_white_background" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="@string/card_number_should_be" android:maxLength="16" android:digits="1234567890٠١٢٣٤٥٦٧٨٩" android:inputType="number" android:imeOptions="actionNext" android:paddingVertical="16dp" style="@style/MontserratRegular"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <Button android:textColor="@color/white" android:id="@+id/btn_recharge" android:background="@drawable/new_rounded_corner_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___20sdp" android:text="@string/recharge" android:textAllCaps="false"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

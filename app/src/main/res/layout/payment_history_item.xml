@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/margin_50">
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_medium_new" android:textColor="@color/color_black_new" android:id="@+id/tv_payment_date" android:background="@color/white" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/transaction_type" android:layout_weight="1.2" android:textAlignment="viewStart" style="@style/MontserratRegular"/>
+        <View android:layout_width="@dimen/_5sdp" android:layout_height="0dp"/>
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_medium_new" android:textColor="@color/color_black_new" android:id="@+id/tv_payment_amount" android:background="@color/white" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="1px" android:text="@string/transaction_type" android:layout_weight="1" android:textAlignment="viewStart" style="@style/MontserratMedium"/>
+        <View android:layout_width="@dimen/_5sdp" android:layout_height="0dp"/>
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_medium_new" android:textColor="@color/color_black_new" android:id="@+id/tv_payment_credit" android:background="@color/white" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="1px" android:text="@string/transaction_type" android:layout_weight="1" android:textAlignment="viewStart" style="@style/MontserratRegular"/>
+        <View android:layout_width="@dimen/_5sdp" android:layout_height="0dp"/>
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_medium_new" android:textColor="@color/color_black_new" android:id="@+id/tv_transaction_type" android:background="@color/white" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="1px" android:text="@string/transaction_type" android:layout_weight="1" android:textAlignment="viewStart" style="@style/MontserratRegular"/>
+        <View android:layout_width="@dimen/_5sdp" android:layout_height="0dp"/>
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_medium_new" android:textColor="@color/color_black_new" android:id="@+id/tv_channel_type" android:background="@color/white" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="1px" android:text="@string/transaction_type" android:layout_weight="1" android:textAlignment="viewStart" style="@style/MontserratRegular"/>
+    </LinearLayout>
+    <View android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="1dp"/>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@+id/llManageMembers" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:textSize="16sp" android:textColor="@color/white" android:id="@+id/btnAddMember" android:background="@drawable/new_rounded_corner_button" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/button_left_margin" android:text="@string/familyAddMemeber" android:textAllCaps="false"/>
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/dimen_16sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/familyChooseOneMemberToManage" android:fontFamily="@font/montserrat_semi_bold" android:layout_marginStart="10dp" android:layout_marginEnd="10dp"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvMembers" android:background="@drawable/bg_border_white_new" android:padding="@dimen/_5sdp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/_10sdp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

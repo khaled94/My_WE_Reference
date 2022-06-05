@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition app:constraintSetEnd="@+id/end" app:constraintSetStart="@+id/start" app:duration="1000" app:maxAcceleration="20" app:maxVelocity="20">
+        <KeyFrameSet/>
+        <OnSwipe app:dragDirection="0" app:onTouchUp="0" app:touchAnchorId="@+id/header" app:touchAnchorSide="3"/>
+    </Transition>
+    <ConstraintSet>
+        <Constraint android:id="@+id/widget"/>
+        <Constraint android:id="@+id/tab_layout" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintTop_toBottomOf="@+id/header" app:layout_constraintVertical_bias="0" app:layout_editor_absoluteX="-1dp"/>
+        <Constraint android:id="@+id/header" android:layout_width="match_parent" android:layout_height="345dp" app:layout_editor_absoluteX="1dp" app:layout_editor_absoluteY="0dp"/>
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@+id/widget"/>
+        <Constraint android:id="@+id/header" android:layout_width="match_parent" android:layout_height="0dp"/>
+        <Constraint android:id="@+id/header" android:layout_width="match_parent" android:layout_height="1dp"/>
+    </ConstraintSet>
+</MotionScene>

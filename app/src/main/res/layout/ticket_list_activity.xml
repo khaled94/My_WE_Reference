@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_background" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/ticket_list" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_10" android:layout_marginTop="@dimen/margin_10" android:layout_marginRight="@dimen/margin_10" android:layout_marginStart="@dimen/margin_10" android:layout_marginEnd="@dimen/margin_10"/>
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/black_light" android:gravity="center" android:layout_gravity="center" android:id="@+id/tvNoData" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_15" android:text="@string/no_tickets_found"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

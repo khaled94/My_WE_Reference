@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/white" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:contentInsetEnd="0dp" app:contentInsetLeft="0dp" app:contentInsetRight="0dp" app:contentInsetStart="0dp">
+    <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@+id/imgBackButton" android:padding="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="6dp" android:layout_marginEnd="6dp" android:layout_alignParentStart="true" app:srcCompat="@drawable/ic_back_arrow_icon"/>
+        <com.ucare.we.view.AppCompatTextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/black_light" android:id="@+id/txtTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:layout_toEndOf="@+id/imgBackButton" style="@style/MontserratBold"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.Toolbar>

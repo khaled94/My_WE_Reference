@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:gravity="center" android:orientation="horizontal" android:padding="@dimen/margin_10" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_medium_new" android:textColor="@color/color_black_new" android:id="@+id/tv_item_prefered_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:fontFamily="@font/montserrat_medium"/>
+    <ImageView android:id="@+id/imgview_remove_prefered_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" app:srcCompat="@drawable/ic_delete_"/>
+</LinearLayout>

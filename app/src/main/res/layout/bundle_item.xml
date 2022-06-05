@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:padding="@dimen/single_space_margin" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/bundle_margin" android:layout_marginRight="@dimen/bundle_margin">
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textColor="@color/black_light" android:gravity="start" android:id="@+id/tv_bundle_name" android:layout_width="@dimen/bundle_name" android:layout_height="wrap_content" android:text="Extreme internet hhhh bhhhh bbbbb bhhh nnnn test jjjjjjjjjjjjjjjj hhh hhhhhbb bbbbb" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" style="@style/MyriadProRegular"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/ll_unsubscribe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textColor="@color/black_light" android:id="@+id/tv_unsubscribe_bundle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/un_subscribe" app:drawableStartCompat="@drawable/ic_close_black_24dp" style="@style/MyriadProRegular"/>
+            <View android:background="@android:color/darker_gray" android:layout_width="match_parent" android:layout_height="1dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fab_margin">
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textColor="@color/colorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/renewal_date" style="@style/QuickSandBold"/>
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textColor="@color/colorPrimary" android:id="@+id/tv_renewal_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Control 40" style="@style/QuickSandRegular"/>
+        </LinearLayout>
+        <View android:background="@color/gray" android:layout_width="2dp" android:layout_height="match_parent"/>
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.5">
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textColor="@color/colorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/remaining_days" style="@style/QuickSandBold"/>
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textColor="@color/colorPrimary" android:id="@+id/tv_remaining_days" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 Days" style="@style/QuickSandRegular"/>
+        </LinearLayout>
+        <View android:background="@color/gray" android:layout_width="2dp" android:layout_height="match_parent"/>
+        <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.8">
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textColor="@color/colorPrimary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cost" style="@style/QuickSandBold"/>
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textColor="@color/colorPrimary" android:id="@+id/tv_cost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="30 EGP" style="@style/QuickSandRegular"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@android:color/darker_gray" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="7dp"/>
+</LinearLayout>

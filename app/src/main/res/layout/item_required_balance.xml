@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="horizontal" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="40dp">
+        <View android:background="@color/gray" android:layout_width="1dp" android:layout_height="match_parent"/>
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___14ssp" android:textColor="@color/black_light" android:gravity="start|center_vertical" android:layout_gravity="center" android:id="@+id/tvService" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.5" android:textAlignment="viewStart" android:paddingStart="8dp" android:paddingEnd="8dp" style="@style/MyriadProRegular"/>
+        <View android:background="@color/gray" android:layout_width="1dp" android:layout_height="match_parent"/>
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___14ssp" android:textColor="@color/black_light" android:gravity="center" android:layout_gravity="center" android:id="@+id/tvDueDate" android:layout_width="0dp" android:layout_height="23dp" android:layout_weight="1" style="@style/MyriadProRegular"/>
+        <View android:background="@color/gray" android:layout_width="1dp" android:layout_height="match_parent"/>
+        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___14ssp" android:textColor="@color/black_light" android:gravity="center" android:layout_gravity="center" android:id="@+id/tvRental" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MyriadProRegular"/>
+            <com.ucare.we.view.AppCompatTextView android:textSize="20sp" android:textColor="@color/red" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="**" android:layout_marginStart="2dp" style="@style/MyriadProRegular"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <View android:background="@color/gray" android:layout_width="1dp" android:layout_height="match_parent"/>
+    </LinearLayout>
+    <View android:background="@color/gray" android:layout_width="match_parent" android:layout_height="1dp"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

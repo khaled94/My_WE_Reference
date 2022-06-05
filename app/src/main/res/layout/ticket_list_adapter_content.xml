@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@drawable/gray_border" android:padding="@dimen/margin_20" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_10" android:layout_marginBottom="@dimen/margin_10" android:layout_marginStart="@dimen/margin_7" android:layout_marginEnd="@dimen/margin_7">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/black_light" android:id="@+id/ticketID" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin_20" android:text="@string/Ticket_id" style="@style/MyriadProBold"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/black_light" android:id="@+id/serviceNumberHint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/service_number" style="@style/MyriadProRegular"/>
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/black_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" style="@style/MyriadProRegular"/>
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/boulder" android:id="@+id/serviceNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_4dp" android:layout_marginStart="@dimen/dimen_4dp" style="@style/MyriadProRegular"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_10">
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/black_light" android:id="@+id/customerNameHint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ticket_name" style="@style/MyriadProRegular"/>
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/black_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" style="@style/MyriadProRegular"/>
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/boulder" android:id="@+id/tvTicketName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_4dp" android:layout_marginStart="@dimen/dimen_4dp" style="@style/MyriadProRegular"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_10">
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/black_light" android:id="@+id/ticketStatusHint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ticket_status" style="@style/MyriadProRegular"/>
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/black_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=":" style="@style/MyriadProRegular"/>
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/boulder" android:id="@+id/ticketStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dimen_4dp" android:layout_marginStart="@dimen/dimen_4dp" style="@style/MyriadProRegular"/>
+    </LinearLayout>
+</LinearLayout>

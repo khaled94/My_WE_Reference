@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/toolbar_webview"/>
+    <ProgressBar android:id="@+id/promo_progress" android:background="@null" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-7dp" android:layout_marginBottom="-7dp" android:indeterminate="true" style="?android:attr/progressBarStyleHorizontal"/>
+    <WebView android:id="@+id/promotion_web_view" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

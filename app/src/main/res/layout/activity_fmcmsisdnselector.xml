@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvGroupMSISDN" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:layout_marginStart="20dp" android:layout_marginEnd="20dp" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            <com.ucare.we.view.AppCompatTextView android:layout_gravity="center" android:id="@+id/tvNoDataAvailable" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_25" android:text="@string/no_data"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <include layout="@layout/manage_number_layout"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_medium" android:textColor="@color/black_light" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:text="@string/choose_payment_methods" style="@style/MyriadProRegular"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/ll_credit_card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fab_margin">
+                    <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginRight="@dimen/button_left_margin" android:layout_weight="1" android:layout_marginEnd="@dimen/button_left_margin">
+                        <ImageView android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" app:srcCompat="@drawable/icon_current_number" app:tint="@color/color_dark_purple_new"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2">
+                        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textStyle="normal" android:textColor="@color/color_dark_purple_new" android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/credit_card" android:layout_centerVertical="true" style="@style/MyriadProSemiBold"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <View android:background="@color/gray" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="@dimen/margin_top_view"/>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/ll_recharge_card" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/fab_margin">
+                    <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginRight="@dimen/button_left_margin" android:layout_weight="1" android:layout_marginEnd="@dimen/button_left_margin">
+                        <ImageView android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true" app:srcCompat="@drawable/icon_other_number" app:tint="@color/color_dark_purple_new"/>
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="2">
+                        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textStyle="normal" android:textColor="@color/color_dark_purple_new" android:gravity="center_vertical" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recharge_card" android:layout_centerVertical="true" android:layout_alignParentStart="true" style="@style/MyriadProSemiBold"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <View android:background="@color/gray" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="@dimen/margin_top_view"/>
+                <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:id="@+id/calculatorView" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="@dimen/fab_margin">
+                    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_15" app:layout_constraintTop_toTopOf="0">
+                        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/llBalance" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
+                            <com.ucare.we.view.AppCompatTextView android:textSize="17sp" android:textColor="@color/color_dark_purple_new" android:id="@+id/tvRequiredBalance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/requiredBalance"/>
+                            <com.ucare.we.view.AppCompatTextView android:textSize="12sp" android:textColor="@color/black_light" android:layout_gravity="start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="@string/amountWithOutVat"/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <com.ucare.we.view.AppCompatTextView android:textColor="@color/grayColorSemiBerble" android:id="@+id/btnDetails" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/details" android:textAllCaps="false" android:layout_marginStart="15dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="@+id/llBalance"/>
+                        <com.ucare.we.view.AppCompatTextView android:textSize="14sp" android:textColor="@color/black_light" android:gravity="start" android:layout_gravity="center_horizontal" android:id="@+id/tvAmountToPay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:text="@string/pleaseEnterAmount" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/llBalance"/>
+                        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_15" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/tvAmountToPay">
+                            <EditText android:textSize="12sp" android:textColorHint="@color/gray" android:gravity="center" android:id="@+id/etAmountToPay" android:background="@drawable/input_bg" android:layout_width="160dp" android:layout_height="35dp" android:hint="@string/hintEnterTheAmountToPay" android:maxLength="6" android:layout_weight="1" android:inputType="numberDecimal" app:layout_constraintStart_toEndOf="@+id/tvBalanceText" app:layout_constraintTop_toTopOf="0"/>
+                            <ImageView android:id="@+id/ivConverterIcon" android:layout_width="20dp" android:layout_height="20dp" app:layout_constraintEnd_toEndOf="@+id/etBalance" app:layout_constraintStart_toStartOf="@+id/etBalance" app:layout_constraintTop_toBottomOf="@+id/etBalance" app:srcCompat="@drawable/convert_icon"/>
+                            <EditText android:textSize="12sp" android:textColorHint="@color/gray" android:gravity="center" android:id="@+id/etBalance" android:background="@drawable/input_filped_bg" android:layout_width="160dp" android:layout_height="35dp" android:hint="@string/hintEnterTheBalance" android:maxLength="6" android:layout_weight="1" android:inputType="numberDecimal" android:paddingStart="3dp" android:paddingEnd="3dp" app:layout_constraintStart_toEndOf="@+id/tvAmountToPay" app:layout_constraintTop_toBottomOf="@+id/ivConverterIcon"/>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

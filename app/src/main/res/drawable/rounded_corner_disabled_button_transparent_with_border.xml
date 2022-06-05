@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <stroke android:width="@dimen/button_outline_stroke" android:color="@color/white"/>
+            <gradient android:startColor="#8f53bb" android:endColor="#8f53bb" android:angle="180" android:type="linear" android:gradientRadius="90" android:centerColor="#8f53bb"/>
+            <corners android:radius="@dimen/button_rounded_corner"/>
+            <padding android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp"/>
+        </shape>
+    </item>
+</selector>

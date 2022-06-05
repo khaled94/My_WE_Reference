@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/linear_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_medium" android:textColor="@color/black_light" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/fab_margin" android:text="@string/here_s_your_family_numbers" android:textAlignment="center" style="@style/MyriadProRegularLeft"/>
+        <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_family_number" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+    <RelativeLayout android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignBottom="@+id/linear_layout">
+        <Button android:textSize="@dimen/text_medium_new" android:textColor="@color/white" android:id="@+id/btn_add_new_number" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/home_button_margin" android:text="@string/add_new_number" android:layout_centerInParent="true" android:textAllCaps="false"/>
+    </RelativeLayout>
+</RelativeLayout>
