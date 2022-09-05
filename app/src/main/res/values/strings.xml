@@ -147,17 +147,17 @@
     <string name="arabic">Arabic</string>
     <string name="are_you_sure_renew_your_main_plan">are you sure that you want to renew your \nmain plan</string>
     <string name="are_you_sure_subscribe_to_plan">are you sure that you want to subscribe to\nplan</string>
-    <string name="are_you_sure_to_add_consumption_limit">Are you sure you want to change the consumption limit to %s for the number %s from ( %s ) for the group?</string>
+    <string name="are_you_sure_to_add_consumption_limit" formatted="false">Are you sure you want to change the consumption limit to %s for the number %s from ( %s ) for the group?</string>
     <string name="are_you_sure_to_add_offer">Are you sure you want to add \"%s\" to be shared with your group?</string>
     <string name="are_you_sure_to_add_pay_limit">Are you sure you want to set the payment limit for</string>
-    <string name="are_you_sure_to_add_pay_limit_amount_new">Are you sure you want to set %s EGP payment limit for (%s %s)?</string>
-    <string name="are_you_sure_to_add_pay_limit_percent_new">Are you sure you want to set %s%% payment limit for (%s %s)?</string>
-    <string name="are_you_sure_to_migrate_to_new_plan">Are you sure you want to change your family plan to \"%s\" with max %s members?\nPlease note that your current plan will expire upon confirmation</string>
+    <string name="are_you_sure_to_add_pay_limit_amount_new" formatted="false">Are you sure you want to set %s EGP payment limit for (%s %s)?</string>
+    <string name="are_you_sure_to_add_pay_limit_percent_new" formatted="false">Are you sure you want to set %s%% payment limit for (%s %s)?</string>
+    <string name="are_you_sure_to_migrate_to_new_plan" formatted="false">Are you sure you want to change your family plan to \"%s\" with max %s members?\nPlease note that your current plan will expire upon confirmation</string>
     <string name="are_you_sure_to_remove_consumption_limit">Are you sure you want to remove the consumption limit for number</string>
     <string name="are_you_sure_to_remove_pay_limit">Are you sure you want to remove the payment limit for</string>
     <string name="are_you_sure_to_subscribe">Are you sure you want to subscribe to</string>
-    <string name="are_you_sure_to_update_consumption_limit">Are you sure you want to change the consumption limit to %s for the number %s from ( %s ) for the group?</string>
-    <string name="are_you_sure_to_update_consumption_limit_to_open">Are you sure you want to change the consumption limit to \"open limit\" for the number %s from (%s) for the group?</string>
+    <string name="are_you_sure_to_update_consumption_limit" formatted="false">Are you sure you want to change the consumption limit to %s for the number %s from ( %s ) for the group?</string>
+    <string name="are_you_sure_to_update_consumption_limit_to_open" formatted="false">Are you sure you want to change the consumption limit to \"open limit\" for the number %s from (%s) for the group?</string>
     <string name="are_you_sure_to_update_pay_limit">Are you sure you want to set the payment limit for</string>
     <string name="are_you_sure_you_want_to_subscribe_to">Are you sure you want to Subscribe to %s</string>
     <string name="ask_access">Ask for access</string>
@@ -330,8 +330,8 @@
     <string name="congratulation">Congratulation! Your &lt;strong&gt;password has been changed&lt;/strong&gt; successfully</string>
     <string name="congratulations">Congratulations</string>
     <string name="consumed">Consumed</string>
-    <string name="consumedLimit">Consumed %s %s from %s %s</string>
-    <string name="consumed_value">Consumed &lt;b&gt;&lt;big&gt; %s &lt;/big&gt;&lt;/b&gt;%s from &lt;b&gt;&lt;big&gt;%s &lt;/big&gt;&lt;/b&gt; %s</string>
+    <string name="consumedLimit" formatted="false">Consumed %s %s from %s %s</string>
+    <string name="consumed_value" formatted="false">Consumed &lt;b&gt;&lt;big&gt; %s &lt;/big&gt;&lt;/b&gt;%s from &lt;b&gt;&lt;big&gt;%s &lt;/big&gt;&lt;/b&gt; %s</string>
     <string name="consumption_amp_limit">Consumption Limit</string>
     <string name="consumption_limit_added_successfully">Consumption Limit set successfully</string>
     <string name="consumption_limit_removed_successfully">Consumption Limit has been removed successfully</string>
@@ -374,7 +374,7 @@
     <string name="dec_short">Dec</string>
     <string name="default_email_validation">email not valid</string>
     <string name="default_service_number_validation">The mobile number should begin with 01 and consists of 11 digits, for landline it should start with 0 and consists of minimum of 9 digits including area code</string>
-    <string name="deleteFamilyMemberMessage">Are you sure you want to remove (%s %s) \nfrom the group?</string>
+    <string name="deleteFamilyMemberMessage" formatted="false">Are you sure you want to remove (%s %s) \nfrom the group?</string>
     <string name="deleteGroup">Delete Group</string>
     <string name="deleteGroupConfirmationMessage">Are you sure you want to delete the group?\n\n please note that your current bundle will expire upon confirmation.  </string>
     <string name="delivery_address">Delivery Address</string>
@@ -904,15 +904,15 @@
     <string name="register_with_mobile">Register with your service number</string>
     <string name="registration_mobile_bounus_offer">To enjoy MyWE offer, please recharge your balance or pay your bill and the offer will be activated automatically.</string>
     <string name="remaining">Remaining</string>
-    <string name="remainingPaymentLimit">Remaining %s%s</string>
-    <string name="remainingWithUnits">Remaining %1s %2s</string>
+    <string name="remainingPaymentLimit" formatted="false">Remaining %s%s</string>
+    <string name="remainingWithUnits" formatted="false">Remaining %1s %2s</string>
     <string name="remaining_balance">Remaining\nBalance</string>
     <string name="remaining_balance_new">Remaining Balance</string>
     <string name="remaining_days">Remaining Days</string>
     <string name="remaining_locks">Remaining number of renewals to be able to downgrade your main plan:</string>
     <string name="remaining_of">Remaining of\n</string>
     <string name="remaining_of_txt">Remaining of</string>
-    <string name="remaining_value">Remaining &lt;b&gt;&lt;big&gt;%s&lt;/big&gt;&lt;/b&gt; %s</string>
+    <string name="remaining_value" formatted="false">Remaining &lt;b&gt;&lt;big&gt;%s&lt;/big&gt;&lt;/b&gt; %s</string>
     <string name="remove">Remove</string>
     <string name="removeFamilyMember">Remove Member</string>
     <string name="remove_account">Remove account</string>

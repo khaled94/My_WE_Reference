@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:background="@drawable/background_gradiant_popup" android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:background="@drawable/background_gradiant_popup" android:layout_width="match_parent" android:layout_height="match_parent">
     <androidx.cardview.widget.CardView android:layout_gravity="center" android:background="#0000" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="12dp" android:layout_centerInParent="true" android:elevation="4dp" app:cardBackgroundColor="@color/white" app:cardCornerRadius="16dp" app:cardElevation="4dp">
         <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
             <LinearLayout android:gravity="center" android:orientation="horizontal" android:padding="@dimen/margin_10" android:layout_width="match_parent" android:layout_height="wrap_content">

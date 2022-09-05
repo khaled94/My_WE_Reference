@@ -1,21 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/root" android:background="@drawable/welcome_background" android:layout_width="match_parent" android:layout_height="match_parent">
-    <ScrollView android:id="@+id/top" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0">
-        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
-            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.1">
-                <Button android:textSize="@dimen/___10ssp" android:textStyle="normal" android:textColor="@color/white" android:gravity="center" android:layout_gravity="end" android:id="@+id/btn_change_language" android:background="@drawable/bg_border_white_stroke_new" android:layout_width="@dimen/___80sdp" android:layout_height="@dimen/___32sdp" android:scaleType="fitCenter" android:text="@string/welcome_lang_text" android:textAllCaps="false" android:fontFamily="@font/montserrat_semi_bold" android:paddingStart="@dimen/___10sdp" android:paddingEnd="@dimen/___10sdp" android:layout_marginStart="@dimen/margin_20" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" app:layout_constraintBottom_toBottomOf="@+id/discover_we" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/discover_we" app:srcCompat="@drawable/discover_we_button" style="@style/MontserratBold"/>
-                <Button android:textSize="@dimen/___10ssp" android:textStyle="normal" android:textColor="@color/color_dark_purple_new" android:layout_gravity="end" android:id="@+id/discover_we" android:background="@drawable/bg_border_white_new" android:layout_width="@dimen/___110sdp" android:layout_height="@dimen/___32sdp" android:layout_marginTop="@dimen/___49sdp" android:scaleType="fitCenter" android:text="@string/txtDiscoverWe" android:textAllCaps="false" android:paddingStart="@dimen/___10sdp" android:paddingEnd="@dimen/___10sdp" android:layout_marginEnd="@dimen/margin_20" android:layout_alignParentEnd="true" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0" app:srcCompat="@drawable/discover_we_button" style="@style/MontserratBold"/>
-                <Button android:textSize="@dimen/___10ssp" android:textColor="@color/white" android:layout_gravity="end" android:id="@+id/imgPayBill" android:background="@drawable/bg_border_white_stroke_new" android:layout_width="@dimen/___110sdp" android:layout_height="@dimen/___32sdp" android:layout_marginTop="@dimen/___12sdp" android:scaleType="fitCenter" android:text="@string/pay_bill" android:layout_below="@+id/discover_we" android:textAllCaps="false" android:fontFamily="@font/montserrat_semi_bold" android:paddingStart="@dimen/___10sdp" android:paddingEnd="@dimen/___10sdp" android:layout_marginEnd="@dimen/margin_20" android:layout_alignParentEnd="true" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toBottomOf="@+id/discover_we" app:srcCompat="@drawable/discover_we_button" style="@style/MontserratBold"/>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/welcome_background">
+
+    <ScrollView
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1">
+
+                <Button
+                    android:id="@+id/btn_change_language"
+                    style="@style/MontserratBold"
+                    android:layout_width="@dimen/___80sdp"
+                    android:layout_height="@dimen/___32sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="@dimen/margin_20"
+                    android:background="@drawable/bg_border_white_stroke_new"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/___10sdp"
+                    android:paddingEnd="@dimen/___10sdp"
+                    android:scaleType="fitCenter"
+                    android:text="@string/welcome_lang_text"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/___10ssp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="@+id/discover_we"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/discover_we"
+                    app:srcCompat="@drawable/discover_we_button" />
+
+                <Button
+                    android:id="@+id/discover_we"
+                    style="@style/MontserratBold"
+                    android:layout_width="@dimen/___110sdp"
+                    android:layout_height="@dimen/___32sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/___49sdp"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:background="@drawable/bg_border_white_new"
+                    android:paddingStart="@dimen/___10sdp"
+                    android:paddingEnd="@dimen/___10sdp"
+                    android:scaleType="fitCenter"
+                    android:text="@string/txtDiscoverWe"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_dark_purple_new"
+                    android:textSize="@dimen/___10ssp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/discover_we_button" />
+
+                <Button
+                    android:id="@+id/imgPayBill"
+                    style="@style/MontserratBold"
+                    android:layout_width="@dimen/___110sdp"
+                    android:layout_height="@dimen/___32sdp"
+                    android:layout_below="@+id/discover_we"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/___12sdp"
+                    android:layout_marginEnd="@dimen/margin_20"
+                    android:background="@drawable/bg_border_white_stroke_new"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:paddingStart="@dimen/___10sdp"
+                    android:paddingEnd="@dimen/___10sdp"
+                    android:scaleType="fitCenter"
+                    android:text="@string/pay_bill"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/___10ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/discover_we"
+                    app:srcCompat="@drawable/discover_we_button" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.75">
-                <ImageView android:id="@+id/imageView2" android:layout_width="122dp" android:layout_height="122dp" android:scaleType="centerCrop" android:layout_centerInParent="true" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" app:layout_constraintVertical_bias="0.3" app:srcCompat="@drawable/we_logo_box"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="122dp"
+                    android:layout_height="122dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.3"
+                    app:srcCompat="@drawable/we_logo_box" />
             </RelativeLayout>
-            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.15" android:layout_alignParentBottom="true">
-                <com.ucare.we.view.AppCompatTextView android:textColor="@color/black_light" android:gravity="center" android:id="@+id/textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/quick_login_text" app:fontFamily="@font/montserrat_semi_bold" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/imageView2"/>
-                <Button android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:textColor="@color/white" android:id="@+id/btn_quick_login" android:background="@drawable/new_rounded_corner_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/create_account" android:textAllCaps="false" android:fontFamily="@font/montserrat_semi_bold" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/textView"/>
-                <com.ucare.we.view.AppCompatTextView android:textColor="@color/black_light" android:gravity="center" android:id="@+id/tv_dont_have_account" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:text="@string/quick_login_text2" android:fontFamily="@font/montserrat_semi_bold" app:layout_constraintEnd_toEndOf="0" app:layout_constraintHorizontal_bias="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/btn_quick_login"/>
-                <Button android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:textColor="#702283" android:id="@+id/btn_sign_in" android:background="@drawable/rounded_selected_primary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/sign_in" android:textAllCaps="false" android:fontFamily="@font/montserrat_semi_bold" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/tv_dont_have_account"/>
-                <Button android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:textColor="#702283" android:id="@+id/btn_auto_login" android:background="@drawable/rounded_selected_primary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="@dimen/___35sdp" android:text="@string/quick_login" android:textAllCaps="false" android:fontFamily="@font/montserrat_semi_bold" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintHorizontal_bias="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/btn_sign_in" app:layout_constraintVertical_bias="0.023"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="0.15"
+                android:orientation="vertical">
+
+                <com.ucare.we.view.AppCompatTextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/quick_login_text"
+                    android:textColor="@color/black_light"
+                    app:fontFamily="@font/montserrat_semi_bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+                <Button
+                    android:id="@+id/btn_quick_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/new_rounded_corner_button"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:text="@string/create_account"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                <com.ucare.we.view.AppCompatTextView
+                    android:id="@+id/tv_dont_have_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:gravity="center"
+                    android:text="@string/quick_login_text2"
+                    android:textColor="@color/black_light"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_quick_login" />
+
+                <Button
+                    android:id="@+id/btn_sign_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/rounded_selected_primary"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:text="@string/sign_in"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#702283"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_dont_have_account" />
+
+                <Button
+                    android:id="@+id/btn_auto_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="@dimen/___35sdp"
+                    android:background="@drawable/rounded_selected_primary"
+                    android:fontFamily="@font/montserrat_semi_bold"
+                    android:text="@string/quick_login"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textColor="#702283"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_sign_in"
+                    app:layout_constraintVertical_bias="0.023" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

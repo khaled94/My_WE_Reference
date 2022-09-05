@@ -1,35 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/toolbar"/>
-    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_25">
-                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/dimen_16sp" android:textStyle="normal" android:textColor="@color/black_light" android:layout_gravity="start" android:id="@+id/reasonTypeHint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/trouble_type" android:layout_marginEnd="@dimen/___10sdp" style="@style/MontserratBold"/>
-                <LinearLayout android:gravity="end" android:layout_gravity="end" android:orientation="horizontal" android:id="@+id/troubleTypeLinearLayout" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
-                    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/dimen_16sp" android:textStyle="normal" android:textColor="@color/black_light" android:id="@+id/troubleType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/margin_10" android:text="@string/not_set" android:layout_weight="1.8" android:textAlignment="viewEnd" android:layout_marginEnd="@dimen/___4sdp" style="@style/MontserratRegular"/>
-                    <com.ucare.we.view.AppCompatTextView android:textStyle="normal" android:textColor="@color/black_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="&gt;" android:textAlignment="center" style="@style/MontserratRegular"/>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_25"
+                android:orientation="horizontal">
+
+                <com.ucare.we.view.AppCompatTextView
+                    android:id="@+id/reasonTypeHint"
+                    style="@style/MontserratBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="@dimen/___10sdp"
+                    android:text="@string/trouble_type"
+                    android:textColor="@color/black_light"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="normal" />
+
+                <LinearLayout
+                    android:id="@+id/troubleTypeLinearLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <com.ucare.we.view.AppCompatTextView
+                        android:id="@+id/troubleType"
+                        style="@style/MontserratRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/___4sdp"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_weight="1.8"
+                        android:text="@string/not_set"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/black_light"
+                        android:textSize="@dimen/dimen_16sp"
+                        android:textStyle="normal" />
+
+                    <com.ucare.we.view.AppCompatTextView
+                        style="@style/MontserratRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="&gt;"
+                        android:textAlignment="center"
+                        android:textColor="@color/black_light"
+                        android:textStyle="normal" />
                 </LinearLayout>
             </LinearLayout>
-            <EditText android:textColorHint="@color/medium_gray" android:gravity="start" android:id="@+id/troubleDescriptionEditText" android:background="@drawable/gray_rounded_boarders" android:padding="@dimen/dimen_13dp" android:layout_width="match_parent" android:layout_height="@dimen/dimen_170dp" android:layout_marginLeft="@dimen/margin_25" android:layout_marginRight="@dimen/margin_25" android:hint="@string/trouble_description"/>
-            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/dimen_16sp" android:textStyle="normal" android:textColor="@color/black_light" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_25" android:layout_marginTop="@dimen/margin_25" android:layout_marginRight="@dimen/margin_25" android:text="@string/delivery_address" style="@style/MontserratBold"/>
-            <EditText android:textColorHint="@color/black_light" android:id="@+id/address" android:background="@drawable/edit_text_underline_new" android:visibility="gone" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginLeft="@dimen/margin_25" android:layout_marginTop="@dimen/margin_15" android:layout_marginRight="@dimen/margin_25" android:hint="@string/address" android:inputType="text" style="@style/MontserratRegular"/>
-            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/dimen_16sp" android:textStyle="normal" android:textColor="@color/black_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_25" android:layout_marginTop="@dimen/margin_25" android:layout_marginRight="@dimen/margin_25" android:text="@string/contact_number" style="@style/MontserratBold"/>
-            <com.google.android.material.textfield.TextInputLayout android:id="@+id/til_number" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_25" android:layout_marginTop="@dimen/margin_15" android:layout_marginRight="@dimen/margin_25" app:errorIconDrawable="@null" style="@style/MontserratRegular">
-                <com.google.android.material.textfield.TextInputEditText android:id="@+id/contactNumber" android:background="@drawable/text_input_white_background" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="@string/number" android:maxLength="11" android:inputType="number" android:paddingStart="8dp" android:paddingEnd="8dp" style="@style/MontserratRegular"/>
+
+            <EditText
+                android:id="@+id/troubleDescriptionEditText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_170dp"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_marginRight="@dimen/margin_25"
+                android:background="@drawable/gray_rounded_boarders"
+                android:gravity="start"
+                android:hint="@string/trouble_description"
+                android:padding="@dimen/dimen_13dp"
+                android:textColorHint="@color/medium_gray" />
+
+            <com.ucare.we.view.AppCompatTextView
+                style="@style/MontserratBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_marginTop="@dimen/margin_25"
+                android:layout_marginRight="@dimen/margin_25"
+                android:text="@string/delivery_address"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/dimen_16sp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/address"
+                style="@style/MontserratRegular"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_marginTop="@dimen/margin_15"
+                android:layout_marginRight="@dimen/margin_25"
+                android:background="@drawable/edit_text_underline_new"
+                android:hint="@string/address"
+                android:inputType="text"
+                android:textColorHint="@color/black_light"
+                android:visibility="gone" />
+
+            <com.ucare.we.view.AppCompatTextView
+                style="@style/MontserratBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_marginTop="@dimen/margin_25"
+                android:layout_marginRight="@dimen/margin_25"
+                android:text="@string/contact_number"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/dimen_16sp"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_number"
+                style="@style/MontserratRegular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_marginTop="@dimen/margin_15"
+                android:layout_marginRight="@dimen/margin_25"
+                app:errorIconDrawable="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/contactNumber"
+                    style="@style/MontserratRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/text_input_white_background"
+                    android:hint="@string/number"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:paddingStart="8dp"
+                    android:paddingTop="16dp"
+                    android:paddingEnd="8dp"
+                    android:paddingBottom="16dp" />
             </com.google.android.material.textfield.TextInputLayout>
-            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/dimen_16sp" android:textStyle="normal" android:textColor="@color/black_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_25" android:layout_marginTop="@dimen/margin_25" android:layout_marginRight="@dimen/margin_25" android:text="@string/contact_email" style="@style/MontserratBold"/>
-            <com.google.android.material.textfield.TextInputLayout android:id="@+id/til_email" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_25" android:layout_marginTop="@dimen/margin_15" android:layout_marginRight="@dimen/margin_25" app:errorIconDrawable="@null">
-                <com.google.android.material.textfield.TextInputEditText android:id="@+id/contactEmailEditText" android:background="@drawable/text_input_white_background" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="@string/email" android:inputType="textEmailAddress" style="@style/MontserratRegular"/>
+
+            <com.ucare.we.view.AppCompatTextView
+                style="@style/MontserratBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_marginTop="@dimen/margin_25"
+                android:layout_marginRight="@dimen/margin_25"
+                android:text="@string/contact_email"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/dimen_16sp"
+                android:textStyle="normal" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_marginTop="@dimen/margin_15"
+                android:layout_marginRight="@dimen/margin_25"
+                app:errorIconDrawable="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/contactEmailEditText"
+                    style="@style/MontserratRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/text_input_white_background"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp" />
             </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/text_input_bottom_margin" android:layout_marginBottom="@dimen/text_input_bottom_margin" app:hintTextAppearance="@style/TextLabel" style="@style/MyriadProSemiBold">
-                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/dimen_16sp" android:textStyle="normal" android:textColor="@color/black_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_25" android:layout_marginTop="@dimen/margin_25" android:layout_marginRight="@dimen/margin_25" android:text="@string/attach_image" android:inputType="number" style="@style/MontserratBold"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/MyriadProSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_input_bottom_margin"
+                android:layout_marginBottom="@dimen/text_input_bottom_margin"
+                app:hintTextAppearance="@style/TextLabel">
+
+                <com.ucare.we.view.AppCompatTextView
+                    style="@style/MontserratBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_25"
+                    android:layout_marginTop="@dimen/margin_25"
+                    android:layout_marginRight="@dimen/margin_25"
+                    android:inputType="number"
+                    android:text="@string/attach_image"
+                    android:textColor="@color/black_light"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="normal" />
             </com.google.android.material.textfield.TextInputLayout>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_25">
-                <ImageView android:textSize="@dimen/dimen_16sp" android:textStyle="normal" android:id="@+id/addImage" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginLeft="@dimen/margin_25" android:layout_marginStart="@dimen/margin_25" app:srcCompat="@drawable/ic_upload_image" style="@style/MontserratBold"/>
-                <androidx.recyclerview.widget.RecyclerView android:id="@+id/imagesRecyclerView" android:layout_width="wrap_content" android:layout_height="@dimen/margin_50" android:layout_marginLeft="@dimen/margin_10" android:layout_marginStart="@dimen/margin_10" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_25">
+
+                <ImageView
+                    android:id="@+id/addImage"
+                    style="@style/MontserratBold"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/margin_25"
+                    android:layout_marginLeft="@dimen/margin_25"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="normal"
+                    app:srcCompat="@drawable/ic_upload_image" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/imagesRecyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_50"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
             </LinearLayout>
-            <LinearLayout android:paddingLeft="@dimen/fab_margin" android:paddingRight="@dimen/fab_margin" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="@dimen/margin_25" android:layout_marginBottom="@dimen/margin_25" android:layout_weight="1">
-                <Button android:textStyle="normal" android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_send_ticket" android:background="@drawable/new_rounded_corner_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/send_ticket" android:textAllCaps="false" android:textAlignment="center" style="@style/MyriadProBold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/margin_25"
+                android:layout_marginBottom="@dimen/margin_25"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/fab_margin"
+                android:paddingRight="@dimen/fab_margin">
+
+                <Button
+                    android:id="@+id/btn_send_ticket"
+                    style="@style/MyriadProBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/new_rounded_corner_button"
+                    android:gravity="center"
+                    android:text="@string/send_ticket"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="normal" />
             </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

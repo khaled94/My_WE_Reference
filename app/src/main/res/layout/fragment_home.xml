@@ -1,152 +1,1023 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/root_layout" android:layout_width="match_parent" android:layout_height="match_parent" app:layoutDescription="@xml/test_motion_scene">
-    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/header" android:background="@drawable/border_bg_gradient" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" app:layout_collapseMode="2">
-        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/swipeRefreshLayout" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
-            <androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/border_bg_gradient" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" app:layout_collapseMode="1">
-                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___17ssp" android:textColor="#f6b427" android:id="@+id/tvGreetingText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___10sdp" android:text="@string/home_hello" android:layout_marginStart="@dimen/___15sdp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/MontserratMedium"/>
-                <ImageView android:textSize="@dimen/___24ssp" android:textColor="#f6b427" android:id="@+id/searchImageView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_hello" android:layout_marginEnd="@dimen/___15sdp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="@+id/tvGreetingText" app:srcCompat="@drawable/ic_search"/>
-                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___22ssp" android:textColor="@color/white" android:id="@+id/tvUserName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___5sdp" app:layout_constraintStart_toStartOf="@+id/tvGreetingText" app:layout_constraintTop_toBottomOf="@+id/tvGreetingText" style="@style/MontserratMedium"/>
-                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="@color/white" android:id="@+id/tvManagingText" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___15sdp" android:text="@string/home_you_are_managing" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="@+id/tvGreetingText" app:layout_constraintTop_toBottomOf="@+id/tvUserName" style="@style/MontserratRegular"/>
-                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___19ssp" android:textColor="@color/white" android:id="@+id/tvManagingNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___5sdp" app:layout_constraintStart_toStartOf="@+id/tvGreetingText" app:layout_constraintTop_toBottomOf="@+id/tvManagingText" style="@style/MontserratMedium"/>
-                <ImageView android:textSize="@dimen/___22ssp" android:textColor="@color/white" android:id="@+id/btn_current_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___5sdp" android:layout_marginStart="@dimen/___10sdp" app:layout_constraintBottom_toBottomOf="@+id/tvManagingNumber" app:layout_constraintStart_toEndOf="@+id/tvManagingNumber" app:layout_constraintTop_toTopOf="@+id/tvManagingNumber" app:srcCompat="@drawable/ic_manage_icon"/>
-                <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:id="@+id/llUserPlan" android:background="@drawable/border_bg_white_corner" android:layout_width="match_parent" android:layout_height="@dimen/___65sdp" android:layout_margin="@dimen/___10sdp" app:layout_constraintTop_toBottomOf="@+id/tvManagingNumber">
-                    <ImageView android:layout_gravity="center_vertical" android:id="@+id/im_mainPlan" android:layout_width="@dimen/___60sdp" android:layout_height="@dimen/___40sdp" android:layout_marginStart="@dimen/___15sdp"/>
-                    <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/border_bg_palne" android:background="@drawable/border_bg_plan" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:paddingStart="@dimen/___30sdp" android:layout_marginStart="@dimen/___10sdp">
-                        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_your_plan" style="@style/MontserratRegular"/>
-                        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___11ssp" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/txtPlanName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___2sdp" android:layout_marginBottom="@dimen/___2sdp" android:maxLines="2" style="@style/MontserratMedium"/>
-                        <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="wrap_content" android:layout_height="wrap_content">
-                            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_renewal_date2" android:drawablePadding="@dimen/___2sdp" app:drawableStartCompat="@drawable/ic_renewal_date" app:drawableTint="@color/white" style="@style/MontserratRegular"/>
-                            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" " android:drawablePadding="@dimen/___2sdp" app:drawableTint="@color/white" style="@style/MontserratRegular"/>
-                            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="@color/white" android:id="@+id/txtRenewalDate" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MontserratRegular"/>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layoutDescription="@xml/test_motion_scene">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bg_gradient"
+        android:fitsSystemWindows="true"
+        android:scaleType="centerCrop"
+        app:layout_collapseMode="parallax">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bg_gradient"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax">
+
+                <com.ucare.we.view.AppCompatTextView
+                    android:id="@+id/tvGreetingText"
+                    style="@style/MontserratMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/___15sdp"
+                    android:layout_marginTop="@dimen/___10sdp"
+                    android:text="@string/home_hello"
+                    android:textColor="#f6b427"
+                    android:textSize="@dimen/___17ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/searchImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/___15sdp"
+                    android:text="@string/home_hello"
+                    android:textColor="#f6b427"
+                    android:textSize="@dimen/___24ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvGreetingText"
+                    app:srcCompat="@drawable/ic_search" />
+
+                <com.ucare.we.view.AppCompatTextView
+                    android:id="@+id/tvUserName"
+                    style="@style/MontserratMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/___5sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/___22ssp"
+                    app:layout_constraintStart_toStartOf="@+id/tvGreetingText"
+                    app:layout_constraintTop_toBottomOf="@+id/tvGreetingText" />
+
+                <com.ucare.we.view.AppCompatTextView
+                    android:id="@+id/tvManagingText"
+                    style="@style/MontserratRegular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/___15sdp"
+                    android:text="@string/home_you_are_managing"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/___9ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tvGreetingText"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
+
+                <com.ucare.we.view.AppCompatTextView
+                    android:id="@+id/tvManagingNumber"
+                    style="@style/MontserratMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/___5sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/___19ssp"
+                    app:layout_constraintStart_toStartOf="@+id/tvGreetingText"
+                    app:layout_constraintTop_toBottomOf="@+id/tvManagingText" />
+
+                <ImageView
+                    android:id="@+id/btn_current_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/___10sdp"
+                    android:layout_marginTop="@dimen/___5sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/___22ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvManagingNumber"
+                    app:layout_constraintStart_toEndOf="@+id/tvManagingNumber"
+                    app:layout_constraintTop_toTopOf="@+id/tvManagingNumber"
+                    app:srcCompat="@drawable/ic_manage_icon" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/llUserPlan"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/___65sdp"
+                    android:layout_margin="@dimen/___10sdp"
+                    android:background="@drawable/border_bg_white_corner"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/tvManagingNumber">
+
+                    <ImageView
+                        android:id="@+id/im_mainPlan"
+                        android:layout_width="@dimen/___60sdp"
+                        android:layout_height="@dimen/___40sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/___15sdp" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/border_bg_palne"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/___10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_bg_plan"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/___30sdp">
+
+                        <com.ucare.we.view.AppCompatTextView
+                            style="@style/MontserratRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_your_plan"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/___9ssp" />
+
+                        <com.ucare.we.view.AppCompatTextView
+                            android:id="@+id/txtPlanName"
+                            style="@style/MontserratMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/___2sdp"
+                            android:layout_marginBottom="@dimen/___2sdp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/___11ssp" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.ucare.we.view.AppCompatTextView
+                                style="@style/MontserratRegular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="@dimen/___2sdp"
+                                android:text="@string/home_renewal_date2"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/___9ssp"
+                                app:drawableStartCompat="@drawable/ic_renewal_date"
+                                app:drawableTint="@color/white" />
+
+                            <com.ucare.we.view.AppCompatTextView
+                                style="@style/MontserratRegular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawablePadding="@dimen/___2sdp"
+                                android:text=" "
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/___9ssp"
+                                app:drawableTint="@color/white" />
+
+                            <com.ucare.we.view.AppCompatTextView
+                                android:id="@+id/txtRenewalDate"
+                                style="@style/MontserratRegular"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/___9ssp" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
                     </androidx.appcompat.widget.LinearLayoutCompat>
                 </androidx.appcompat.widget.LinearLayoutCompat>
-                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="@color/white" android:gravity="center" android:id="@+id/lastModificationDate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___10sdp" android:drawablePadding="8dp" app:drawableStartCompat="@drawable/ic_refresh_line" app:layout_constraintEnd_toEndOf="@+id/llUserPlan" app:layout_constraintTop_toBottomOf="@+id/llUserPlan" style="@style/MontserratRegular"/>
+
+                <com.ucare.we.view.AppCompatTextView
+                    android:id="@+id/lastModificationDate"
+                    style="@style/MontserratRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/___10sdp"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/___9ssp"
+                    app:drawableStartCompat="@drawable/ic_refresh_line"
+                    app:layout_constraintEnd_toEndOf="@+id/llUserPlan"
+                    app:layout_constraintTop_toBottomOf="@+id/llUserPlan" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@+id/llContent" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintTop_toBottomOf="@+id/header">
-        <RelativeLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/rl_tabLayout" android:background="#533987" android:layout_width="match_parent" android:layout_height="70dp">
-            <androidx.recyclerview.widget.RecyclerView android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/rv_slider" android:layout_width="match_parent" android:layout_height="64dp" android:layout_centerInParent="true" android:layout_marginStart="@dimen/___10sdp" android:layout_marginEnd="@dimen/___10sdp"/>
-            <androidx.appcompat.widget.LinearLayoutCompat android:gravity="start" android:id="@+id/ll_leftArrow" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true" android:layout_toStartOf="@+id/ll_slider_center" android:layout_alignParentStart="true">
-                <ImageView android:layout_gravity="center" android:id="@+id/ic_left_arrow" android:layout_width="@dimen/___10sdp" android:layout_height="@dimen/___10sdp" android:layout_centerInParent="true" android:layout_marginStart="@dimen/___10sdp" android:layout_alignParentStart="true" app:srcCompat="@drawable/ic_arrow_left"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <RelativeLayout
+            android:id="@+id/rl_tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="#533987"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_slider"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/___10sdp"
+                android:layout_marginEnd="@dimen/___10sdp"
+                android:orientation="horizontal" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_leftArrow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@+id/ll_slider_center"
+                android:gravity="start">
+
+                <ImageView
+                    android:id="@+id/ic_left_arrow"
+                    android:layout_width="@dimen/___10sdp"
+                    android:layout_height="@dimen/___10sdp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/___10sdp"
+                    app:srcCompat="@drawable/ic_arrow_left" />
             </androidx.appcompat.widget.LinearLayoutCompat>
-            <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:id="@+id/ll_slider_center" android:background="@drawable/background_slider" android:layout_width="110dp" android:layout_height="match_parent" android:layout_marginTop="10dp" android:layout_marginBottom="-5dp" android:layout_centerInParent="true">
-                <ImageView android:id="@+id/iv_slider_center" android:layout_width="26dp" android:layout_height="26dp" android:layout_marginTop="@dimen/___3sdp"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_slider_center"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="-5dp"
+                android:background="@drawable/background_slider"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_slider_center"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="@dimen/___3sdp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
-            <androidx.appcompat.widget.LinearLayoutCompat android:gravity="end" android:id="@+id/ll_rightArrow" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_toEndOf="@+id/ll_slider_center">
-                <ImageView android:layout_gravity="center" android:id="@+id/ic_right_arrow" android:layout_width="@dimen/___10sdp" android:layout_height="@dimen/___10sdp" android:layout_centerInParent="true" android:layout_marginStart="@dimen/___15sdp" android:layout_marginEnd="@dimen/___10sdp" android:layout_alignParentEnd="true" app:srcCompat="@drawable/ic_arrow_right"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_rightArrow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/ll_slider_center"
+                android:gravity="end">
+
+                <ImageView
+                    android:id="@+id/ic_right_arrow"
+                    android:layout_width="@dimen/___10sdp"
+                    android:layout_height="@dimen/___10sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/___15sdp"
+                    android:layout_marginEnd="@dimen/___10sdp"
+                    app:srcCompat="@drawable/ic_arrow_right" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </RelativeLayout>
-        <androidx.core.widget.NestedScrollView android:id="@+id/view_pager" android:background="#f5f5f5" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="1">
-            <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@+id/scrollable" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content">
-                <com.google.android.material.tabs.TabLayout android:id="@+id/tab_layout" android:background="@color/colorPrimary" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/tab_layout_height" app:tabBackground="@drawable/tab_selector" app:tabGravity="1" app:tabIndicatorHeight="0dp" app:tabMaxWidth="@dimen/fab_margin"/>
-                <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@+id/ll_progressCircle" android:background="@drawable/layout_bg_bottom_round" android:padding="@dimen/___5sdp" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
-                    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___11ssp" android:textColor="#313131" android:id="@+id/progress_ttl_tv" android:padding="@dimen/___5sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/___5sdp" style="@style/MontserratSemiBold"/>
-                    <RelativeLayout android:layout_gravity="center" android:background="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___10sdp" android:layout_marginStart="@dimen/___10sdp">
-                        <ImageView android:id="@+id/ic_addons" android:background="@drawable/background_add_icon" android:padding="@dimen/___4sdp" android:layout_width="@dimen/___21sdp" android:layout_height="@dimen/___21sdp" android:layout_marginTop="@dimen/___40sdp" android:layout_toEndOf="@+id/progress_frame_lt" app:srcCompat="@drawable/ic_add_icon"/>
-                        <FrameLayout android:layout_gravity="center" android:id="@+id/progress_frame_lt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="6dp">
-                            <ProgressBar android:id="@+id/progressBar" android:padding="1dp" android:layout_width="@dimen/___182sdp" android:layout_height="@dimen/___182sdp" android:max="100" android:progress="80" android:progressDrawable="@drawable/progress_ring" android:rotation="90" android:layoutDirection="rtl" android:elevation="8dp" style="?android:attr/progressBarStyleHorizontal"/>
-                            <RelativeLayout android:gravity="center" android:layout_gravity="center" android:background="@drawable/prgress_bg_oval_shape" android:padding="@dimen/___10sdp" android:layout_width="@dimen/___152sdp" android:layout_height="@dimen/___152sdp" android:elevation="@dimen/___4sdp">
-                                <LinearLayout android:gravity="center_horizontal" android:id="@+id/ln_mb_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_marginEnd="@dimen/___10sdp">
-                                    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___20ssp" android:textColor="#702283" android:id="@+id/tv_remaining_prgBar" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MontserratSemiBold"/>
-                                    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___10ssp" android:textColor="#702283" android:id="@+id/tv_remainingUnit_prgBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/___3sdp" style="@style/MontserratSemiBold"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/view_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#f5f5f5">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/scrollable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/tab_layout_height"
+                    android:background="@color/colorPrimary"
+                    android:visibility="gone"
+                    app:tabBackground="@drawable/tab_selector"
+                    app:tabGravity="fill"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabMaxWidth="@dimen/fab_margin" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/ll_progressCircle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layout_bg_bottom_round"
+                    android:orientation="vertical"
+                    android:padding="@dimen/___5sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.ucare.we.view.AppCompatTextView
+                        android:id="@+id/progress_ttl_tv"
+                        style="@style/MontserratSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/___5sdp"
+                        android:padding="@dimen/___5sdp"
+                        android:textColor="#313131"
+                        android:textSize="@dimen/___11ssp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/___10sdp"
+                        android:layout_marginTop="@dimen/___10sdp"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/ic_addons"
+                            android:layout_width="@dimen/___21sdp"
+                            android:layout_height="@dimen/___21sdp"
+                            android:layout_marginTop="@dimen/___40sdp"
+                            android:layout_toEndOf="@+id/progress_frame_lt"
+                            android:background="@drawable/background_add_icon"
+                            android:padding="@dimen/___4sdp"
+                            app:srcCompat="@drawable/ic_add_icon" />
+
+                        <FrameLayout
+                            android:id="@+id/progress_frame_lt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:elevation="6dp">
+
+                            <ProgressBar
+                                android:id="@+id/progressBar"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="@dimen/___182sdp"
+                                android:layout_height="@dimen/___182sdp"
+                                android:elevation="8dp"
+                                android:layoutDirection="rtl"
+                                android:max="100"
+                                android:padding="1dp"
+                                android:progress="80"
+                                android:progressDrawable="@drawable/progress_ring"
+                                android:rotation="90" />
+
+                            <RelativeLayout
+                                android:layout_width="@dimen/___152sdp"
+                                android:layout_height="@dimen/___152sdp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/prgress_bg_oval_shape"
+                                android:elevation="@dimen/___4sdp"
+                                android:gravity="center"
+                                android:padding="@dimen/___10sdp">
+
+                                <LinearLayout
+                                    android:id="@+id/ln_mb_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginEnd="@dimen/___10sdp"
+                                    android:gravity="center_horizontal">
+
+                                    <com.ucare.we.view.AppCompatTextView
+                                        android:id="@+id/tv_remaining_prgBar"
+                                        style="@style/MontserratSemiBold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="#702283"
+                                        android:textSize="@dimen/___20ssp" />
+
+                                    <com.ucare.we.view.AppCompatTextView
+                                        android:id="@+id/tv_remainingUnit_prgBar"
+                                        style="@style/MontserratSemiBold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/___3sdp"
+                                        android:textColor="#702283"
+                                        android:textSize="@dimen/___10ssp" />
                                 </LinearLayout>
-                                <LinearLayout android:orientation="vertical" android:id="@+id/ln_remaining_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/ln_mb_tv" android:layout_centerInParent="true">
-                                    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="@color/black_light" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/remaining_of_txt" style="@style/MontserratSemiBold"/>
-                                    <LinearLayout android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
-                                        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___11ssp" android:textColor="@color/black_light" android:id="@+id/tv_total_prgBr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/___3sdp" style="@style/MontserratSemiBold"/>
-                                        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="@color/black_light" android:id="@+id/tv_totalUnit_prgBr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mb" android:layout_marginStart="@dimen/___3sdp"/>
+
+                                <LinearLayout
+                                    android:id="@+id/ln_remaining_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ln_mb_tv"
+                                    android:layout_centerInParent="true"
+                                    android:orientation="vertical">
+
+                                    <com.ucare.we.view.AppCompatTextView
+                                        style="@style/MontserratSemiBold"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="@string/remaining_of_txt"
+                                        android:textColor="@color/black_light"
+                                        android:textSize="@dimen/___9ssp" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:gravity="center">
+
+                                        <com.ucare.we.view.AppCompatTextView
+                                            android:id="@+id/tv_total_prgBr"
+                                            style="@style/MontserratSemiBold"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/___3sdp"
+                                            android:textColor="@color/black_light"
+                                            android:textSize="@dimen/___11ssp" />
+
+                                        <com.ucare.we.view.AppCompatTextView
+                                            android:id="@+id/tv_totalUnit_prgBr"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="@dimen/___3sdp"
+                                            android:text="@string/mb"
+                                            android:textColor="@color/black_light"
+                                            android:textSize="@dimen/___9ssp" />
                                     </LinearLayout>
                                 </LinearLayout>
                             </RelativeLayout>
                         </FrameLayout>
                     </RelativeLayout>
-                    <androidx.appcompat.widget.LinearLayoutCompat android:layout_gravity="center_horizontal" android:id="@+id/ll_check_detail" android:background="@drawable/details_btn_bg" android:padding="@dimen/___5sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___7sdp">
-                        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="#f6b427" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_check_details" style="@style/MontserratSemiBold"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/ll_check_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/___7sdp"
+                        android:background="@drawable/details_btn_bg"
+                        android:padding="@dimen/___5sdp">
+
+                        <com.ucare.we.view.AppCompatTextView
+                            style="@style/MontserratSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/home_check_details"
+                            android:textColor="#f6b427"
+                            android:textSize="@dimen/___9ssp" />
                     </androidx.appcompat.widget.LinearLayoutCompat>
                 </androidx.appcompat.widget.LinearLayoutCompat>
-                <androidx.cardview.widget.CardView android:background="@drawable/border_bg_white_corner" android:padding="@dimen/___10sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___20sdp" android:layout_marginStart="@dimen/___5sdp" android:layout_marginEnd="@dimen/___5sdp" android:elevation="@dimen/___10sdp" app:cardCornerRadius="@dimen/___5sdp">
-                    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                        <RelativeLayout android:id="@+id/rl_outstandingAmount" android:padding="@dimen/___5sdp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
-                            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___11ssp" android:textColor="#313131" android:id="@+id/home_outStanding_amout_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_outstanding_amount" android:layout_centerVertical="true" style="@style/MontserratSemiBold"/>
-                            <androidx.appcompat.widget.LinearLayoutCompat android:id="@+id/llOutstandingBalance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_alignParentEnd="true">
-                                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___24ssp" android:textColor="#702283" android:id="@+id/outstanding_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/MontserratBold"/>
-                                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="#702283" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/egp" android:layout_marginStart="@dimen/___5sdp" style="@style/MontserratMedium"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/___5sdp"
+                    android:layout_marginTop="@dimen/___20sdp"
+                    android:layout_marginEnd="@dimen/___5sdp"
+                    android:background="@drawable/border_bg_white_corner"
+                    android:elevation="@dimen/___10sdp"
+                    android:padding="@dimen/___10sdp"
+                    app:cardCornerRadius="@dimen/___5sdp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_outstandingAmount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/___5sdp"
+                            android:visibility="gone">
+
+                            <com.ucare.we.view.AppCompatTextView
+                                android:id="@+id/home_outStanding_amout_tv"
+                                style="@style/MontserratSemiBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="@string/home_outstanding_amount"
+                                android:textColor="#313131"
+                                android:textSize="@dimen/___11ssp" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/llOutstandingBalance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerInParent="true">
+
+                                <com.ucare.we.view.AppCompatTextView
+                                    android:id="@+id/outstanding_amount"
+                                    style="@style/MontserratBold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#702283"
+                                    android:textSize="@dimen/___24ssp" />
+
+                                <com.ucare.we.view.AppCompatTextView
+                                    style="@style/MontserratMedium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/___5sdp"
+                                    android:text="@string/egp"
+                                    android:textColor="#702283"
+                                    android:textSize="@dimen/___9ssp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
                         </RelativeLayout>
-                        <View android:id="@+id/line" android:background="#f5f5f5" android:layout_width="match_parent" android:layout_height="1dp"/>
-                        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:padding="@dimen/___8sdp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___10sdp">
-                            <androidx.appcompat.widget.LinearLayoutCompat android:layout_gravity="center" android:orientation="vertical" android:id="@+id/btn_balance_recharge_main" android:padding="@dimen/___5sdp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
-                                <ImageView android:gravity="center" android:layout_gravity="center" android:id="@+id/ic_pay_bill" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_pay_bill"/>
-                                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="@color/color_black_new" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_paybill" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/home_pay_bill" style="@style/MontserratRegular"/>
+
+                        <View
+                            android:id="@+id/line"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#f5f5f5" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/___10sdp"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/___8sdp">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/btn_balance_recharge_main"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="@dimen/___5sdp">
+
+                                <ImageView
+                                    android:id="@+id/ic_pay_bill"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    app:srcCompat="@drawable/ic_pay_bill" />
+
+                                <com.ucare.we.view.AppCompatTextView
+                                    android:id="@+id/tv_paybill"
+                                    style="@style/MontserratRegular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/home_pay_bill"
+                                    android:textColor="@color/color_black_new"
+                                    android:textSize="@dimen/___9ssp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
-                            <androidx.appcompat.widget.LinearLayoutCompat android:layout_gravity="center" android:orientation="vertical" android:id="@+id/btnManagePlan" android:padding="@dimen/___5sdp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
-                                <ImageView android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_manage_plan"/>
-                                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="@color/color_black_new" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_managePlan" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/home_manage_plan" style="@style/MontserratRegular"/>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/btnManagePlan"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="@dimen/___5sdp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    app:srcCompat="@drawable/ic_manage_plan" />
+
+                                <com.ucare.we.view.AppCompatTextView
+                                    android:id="@+id/tv_managePlan"
+                                    style="@style/MontserratRegular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/home_manage_plan"
+                                    android:textColor="@color/color_black_new"
+                                    android:textSize="@dimen/___9ssp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
-                            <androidx.appcompat.widget.LinearLayoutCompat android:layout_gravity="center" android:orientation="vertical" android:id="@+id/btn_subscribe" android:padding="@dimen/___5sdp" android:visibility="gone" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
-                                <ImageView android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_manage_plan"/>
-                                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="@color/color_black_new" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_SubscribePlan" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/subscribe" style="@style/MontserratRegular"/>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/btn_subscribe"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="@dimen/___5sdp"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    app:srcCompat="@drawable/ic_manage_plan" />
+
+                                <com.ucare.we.view.AppCompatTextView
+                                    android:id="@+id/tv_SubscribePlan"
+                                    style="@style/MontserratRegular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/subscribe"
+                                    android:textColor="@color/color_black_new"
+                                    android:textSize="@dimen/___9ssp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
-                            <androidx.appcompat.widget.LinearLayoutCompat android:layout_gravity="center" android:orientation="vertical" android:id="@+id/btn_extra_bundles" android:padding="@dimen/___5sdp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
-                                <ImageView android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_extra_bundles"/>
-                                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="@color/color_black_new" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_extraBundles" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/addons" style="@style/MontserratRegular"/>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/btn_extra_bundles"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:padding="@dimen/___5sdp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    app:srcCompat="@drawable/ic_extra_bundles" />
+
+                                <com.ucare.we.view.AppCompatTextView
+                                    android:id="@+id/tv_extraBundles"
+                                    style="@style/MontserratRegular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/addons"
+                                    android:textColor="@color/color_black_new"
+                                    android:textSize="@dimen/___9ssp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
-                            <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/btn_balance_services_main" android:padding="@dimen/___5sdp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
-                                <ImageView android:layout_gravity="center" android:id="@+id/ic_bill_summary" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_bill_summary"/>
-                                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="@color/color_black_new" android:gravity="center" android:layout_gravity="center" android:id="@+id/tv_billSummary" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/home_bill_summary" style="@style/MontserratRegular"/>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/btn_balance_services_main"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/___5sdp">
+
+                                <ImageView
+                                    android:id="@+id/ic_bill_summary"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    app:srcCompat="@drawable/ic_bill_summary" />
+
+                                <com.ucare.we.view.AppCompatTextView
+                                    android:id="@+id/tv_billSummary"
+                                    style="@style/MontserratRegular"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="@string/home_bill_summary"
+                                    android:textColor="@color/color_black_new"
+                                    android:textSize="@dimen/___9ssp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
                         </androidx.appcompat.widget.LinearLayoutCompat>
                     </androidx.appcompat.widget.LinearLayoutCompat>
                 </androidx.cardview.widget.CardView>
-                <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/rl_pointsCard" android:background="@drawable/bg_points" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/___200sdp" android:layout_marginTop="@dimen/___15sdp" android:layout_marginStart="@dimen/___5sdp" android:layout_marginEnd="@dimen/___5sdp">
-                    <View android:id="@+id/rl_pointsCard_overlay" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
-                    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="0dp" android:layout_height="match_parent" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" app:layout_constraintWidth_percent="0.5">
-                        <ImageView android:id="@+id/ic_home_bonus" android:layout_width="@dimen/___62sdp" android:layout_height="@dimen/___30sdp" android:layout_marginTop="@dimen/___20sdp" android:layout_marginStart="@dimen/___10sdp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" app:srcCompat="@drawable/ic_we_bonus_logo"/>
-                        <ImageView android:layout_width="@dimen/___53sdp" android:layout_height="@dimen/___30sdp" android:layout_centerVertical="true" android:layout_marginStart="@dimen/___10sdp" android:layout_toEndOf="@+id/ic_home_bonus" app:layout_constraintBottom_toBottomOf="@+id/ic_home_bonus" app:layout_constraintStart_toEndOf="@+id/ic_home_bonus" app:layout_constraintTop_toTopOf="@+id/ic_home_bonus" app:layout_goneMarginStart="@dimen/_5sdp" app:srcCompat="@drawable/ic_arabic_slogan"/>
-                        <ImageView android:layout_gravity="center_vertical" android:id="@+id/ic_gift" android:layout_width="@dimen/___9sdp" android:layout_height="@dimen/___12sdp" android:layout_marginTop="@dimen/___20sdp" android:scaleType="fitXY" app:layout_constraintStart_toStartOf="@+id/ic_home_bonus" app:layout_constraintTop_toBottomOf="@+id/ic_home_bonus" app:srcCompat="@drawable/ic_gift_white"/>
-                        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___11ssp" android:textColor="#ffffff" android:id="@+id/home_gift_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_you_got" android:includeFontPadding="false" android:layout_marginStart="@dimen/___4sdp" app:layout_constraintBottom_toBottomOf="@+id/ic_gift" app:layout_constraintStart_toEndOf="@+id/ic_gift" app:layout_constraintTop_toTopOf="@+id/ic_gift" style="@style/MontserratRegular"/>
-                        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___24ssp" android:textColor="#ffffff" android:id="@+id/home_points_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___9sdp" android:includeFontPadding="false" app:layout_constraintStart_toStartOf="@+id/ic_gift" app:layout_constraintTop_toBottomOf="@+id/ic_gift" style="@style/MontserratSemiBold"/>
-                        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___11ssp" android:textColor="#ffffff" android:id="@+id/tv_points_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_points" android:includeFontPadding="false" android:layout_marginStart="4dp" app:layout_constraintBottom_toBottomOf="@+id/home_points_tv" app:layout_constraintStart_toEndOf="@+id/home_points_tv" app:layout_constraintTop_toTopOf="@+id/home_points_tv" app:layout_constraintVertical_bias="0.7" style="@style/MontserratMedium"/>
-                        <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/llOpenLoyaltyPoints" android:background="@drawable/round_btn_bg_white" android:paddingTop="@dimen/___9sdp" android:paddingBottom="@dimen/___9sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___16sdp" android:layout_marginBottom="@dimen/_20sdp" android:minWidth="@dimen/___80sdp" android:paddingStart="@dimen/___11sdp" android:paddingEnd="@dimen/___11sdp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="@+id/home_points_tv" app:layout_constraintTop_toBottomOf="@+id/tv_points_header">
-                            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="#ffffff" android:id="@+id/tv_check_details" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_check_details" android:includeFontPadding="false" style="@style/MontserratBold"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/rl_pointsCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/___200sdp"
+                    android:layout_marginStart="@dimen/___5sdp"
+                    android:layout_marginTop="@dimen/___15sdp"
+                    android:layout_marginEnd="@dimen/___5sdp"
+                    android:background="@drawable/bg_points"
+                    android:visibility="gone">
+
+                    <View
+                        android:id="@+id/rl_pointsCard_overlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.5">
+
+                        <ImageView
+                            android:id="@+id/ic_home_bonus"
+                            android:layout_width="@dimen/___62sdp"
+                            android:layout_height="@dimen/___30sdp"
+                            android:layout_marginStart="@dimen/___10sdp"
+                            android:layout_marginTop="@dimen/___20sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_we_bonus_logo" />
+
+                        <ImageView
+                            android:layout_width="@dimen/___53sdp"
+                            android:layout_height="@dimen/___30sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/___10sdp"
+                            android:layout_toEndOf="@+id/ic_home_bonus"
+                            app:layout_constraintBottom_toBottomOf="@+id/ic_home_bonus"
+                            app:layout_constraintStart_toEndOf="@+id/ic_home_bonus"
+                            app:layout_constraintTop_toTopOf="@+id/ic_home_bonus"
+                            app:layout_goneMarginStart="@dimen/_5sdp"
+                            app:srcCompat="@drawable/ic_arabic_slogan" />
+
+                        <ImageView
+                            android:id="@+id/ic_gift"
+                            android:layout_width="@dimen/___9sdp"
+                            android:layout_height="@dimen/___12sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/___20sdp"
+                            android:scaleType="fitXY"
+                            app:layout_constraintStart_toStartOf="@+id/ic_home_bonus"
+                            app:layout_constraintTop_toBottomOf="@+id/ic_home_bonus"
+                            app:srcCompat="@drawable/ic_gift_white" />
+
+                        <com.ucare.we.view.AppCompatTextView
+                            android:id="@+id/home_gift_tv"
+                            style="@style/MontserratRegular"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/___4sdp"
+                            android:includeFontPadding="false"
+                            android:text="@string/home_you_got"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/___11ssp"
+                            app:layout_constraintBottom_toBottomOf="@+id/ic_gift"
+                            app:layout_constraintStart_toEndOf="@+id/ic_gift"
+                            app:layout_constraintTop_toTopOf="@+id/ic_gift" />
+
+                        <com.ucare.we.view.AppCompatTextView
+                            android:id="@+id/home_points_tv"
+                            style="@style/MontserratSemiBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/___9sdp"
+                            android:includeFontPadding="false"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/___24ssp"
+                            app:layout_constraintStart_toStartOf="@+id/ic_gift"
+                            app:layout_constraintTop_toBottomOf="@+id/ic_gift" />
+
+                        <com.ucare.we.view.AppCompatTextView
+                            android:id="@+id/tv_points_header"
+                            style="@style/MontserratMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:includeFontPadding="false"
+                            android:text="@string/home_points"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/___11ssp"
+                            app:layout_constraintBottom_toBottomOf="@+id/home_points_tv"
+                            app:layout_constraintStart_toEndOf="@+id/home_points_tv"
+                            app:layout_constraintTop_toTopOf="@+id/home_points_tv"
+                            app:layout_constraintVertical_bias="0.7" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/llOpenLoyaltyPoints"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/___16sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:background="@drawable/round_btn_bg_white"
+                            android:gravity="center"
+                            android:minWidth="@dimen/___80sdp"
+                            android:paddingStart="@dimen/___11sdp"
+                            android:paddingTop="@dimen/___9sdp"
+                            android:paddingEnd="@dimen/___11sdp"
+                            android:paddingBottom="@dimen/___9sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/home_points_tv"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_points_header">
+
+                            <com.ucare.we.view.AppCompatTextView
+                                android:id="@+id/tv_check_details"
+                                style="@style/MontserratBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:text="@string/home_check_details"
+                                android:textColor="#ffffff"
+                                android:textSize="@dimen/___9ssp" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
-                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___10sdp" android:layout_marginStart="@dimen/___7sdp" android:layout_marginEnd="@dimen/___7sdp">
-                    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___13ssp" android:textColor="#000000" android:id="@+id/home_new_form_tv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_new_form_we" style="@style/MontserratSemiBold"/>
-                    <androidx.recyclerview.widget.RecyclerView android:id="@+id/home_new_form_rv" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/home_new_form_tv"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/___7sdp"
+                    android:layout_marginTop="@dimen/___10sdp"
+                    android:layout_marginEnd="@dimen/___7sdp">
+
+                    <com.ucare.we.view.AppCompatTextView
+                        android:id="@+id/home_new_form_tv"
+                        style="@style/MontserratSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_new_form_we"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/___13ssp"
+                        android:visibility="gone" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/home_new_form_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_new_form_tv"
+                        android:visibility="gone" />
                 </RelativeLayout>
-                <RelativeLayout android:id="@+id/rl_quick_access" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___5sdp" android:layout_marginStart="@dimen/___7sdp">
-                    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___13ssp" android:textColor="#000000" android:id="@+id/home_Quick_access_ly" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_quick_access" style="@style/MontserratSemiBold"/>
-                    <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/home_Quick_access_ly">
-                        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
-                            <androidx.appcompat.widget.LinearLayoutCompat android:id="@+id/llWePay" android:background="@drawable/border_bg_white_corner" android:layout_width="0dp" android:layout_height="@dimen/___40sdp" android:layout_marginTop="@dimen/___10sdp" android:layout_marginBottom="@dimen/___10sdp" android:layout_weight="1" android:layout_marginEnd="@dimen/___10sdp" android:elevation="@dimen/___5sdp">
-                                <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/___10sdp" app:srcCompat="@drawable/ic_we_pay_icon"/>
-                                <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/wepay_background" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="@dimen/___10sdp">
-                                    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___12ssp" android:textColor="#ffffff" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_we_pay" android:layout_marginStart="@dimen/___10sdp" android:layout_marginEnd="@dimen/___10sdp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rl_quick_access"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/___7sdp"
+                    android:layout_marginTop="@dimen/___5sdp">
+
+                    <com.ucare.we.view.AppCompatTextView
+                        android:id="@+id/home_Quick_access_ly"
+                        style="@style/MontserratSemiBold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_quick_access"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/___13ssp" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_Quick_access_ly"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/llWePay"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/___40sdp"
+                                android:layout_marginTop="@dimen/___10sdp"
+                                android:layout_marginEnd="@dimen/___10sdp"
+                                android:layout_marginBottom="@dimen/___10sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/border_bg_white_corner"
+                                android:elevation="@dimen/___5sdp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/___10sdp"
+                                    app:srcCompat="@drawable/ic_we_pay_icon" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/___10sdp"
+                                    android:background="@drawable/wepay_background"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <com.ucare.we.view.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginStart="@dimen/___10sdp"
+                                        android:layout_marginEnd="@dimen/___10sdp"
+                                        android:gravity="center"
+                                        android:text="@string/home_we_pay"
+                                        android:textColor="#ffffff"
+                                        android:textSize="@dimen/___12ssp" />
                                 </androidx.appcompat.widget.LinearLayoutCompat>
                             </androidx.appcompat.widget.LinearLayoutCompat>
-                            <androidx.appcompat.widget.LinearLayoutCompat android:id="@+id/llPayFixedVoiceBill" android:background="@drawable/border_bg_white_corner" android:layout_width="0dp" android:layout_height="@dimen/___40sdp" android:layout_marginTop="@dimen/___10sdp" android:layout_marginBottom="@dimen/___10sdp" android:layout_weight="1" android:layout_marginEnd="@dimen/___10sdp" android:elevation="@dimen/___5sdp">
-                                <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/___10sdp" app:srcCompat="@drawable/ic_payfixed_bill_icon"/>
-                                <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/payfixed_bill_background" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="@dimen/___10sdp">
-                                    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___12ssp" android:textColor="#ffffff" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_pay_fixed_voice_bill" android:layout_marginStart="@dimen/___10sdp" android:layout_marginEnd="@dimen/___10sdp"/>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/llPayFixedVoiceBill"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/___40sdp"
+                                android:layout_marginTop="@dimen/___10sdp"
+                                android:layout_marginEnd="@dimen/___10sdp"
+                                android:layout_marginBottom="@dimen/___10sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/border_bg_white_corner"
+                                android:elevation="@dimen/___5sdp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/___10sdp"
+                                    app:srcCompat="@drawable/ic_payfixed_bill_icon" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/___10sdp"
+                                    android:background="@drawable/payfixed_bill_background"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <com.ucare.we.view.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginStart="@dimen/___10sdp"
+                                        android:layout_marginEnd="@dimen/___10sdp"
+                                        android:gravity="center"
+                                        android:text="@string/home_pay_fixed_voice_bill"
+                                        android:textColor="#ffffff"
+                                        android:textSize="@dimen/___12ssp" />
                                 </androidx.appcompat.widget.LinearLayoutCompat>
                             </androidx.appcompat.widget.LinearLayoutCompat>
                         </androidx.appcompat.widget.LinearLayoutCompat>
-                        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
-                            <androidx.appcompat.widget.LinearLayoutCompat android:id="@+id/llFamilyPlan" android:background="@drawable/border_bg_white_corner" android:visibility="gone" android:layout_width="0dp" android:layout_height="@dimen/___40sdp" android:layout_marginTop="@dimen/___10sdp" android:layout_marginBottom="@dimen/___10sdp" android:layout_weight="1" android:layout_marginEnd="@dimen/___10sdp" android:elevation="@dimen/___5sdp">
-                                <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/___10sdp" app:srcCompat="@drawable/ic_family_plan_icon__"/>
-                                <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/family_plan_background" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginStart="@dimen/___10sdp">
-                                    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___12ssp" android:textColor="#ffffff" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_family_plan" android:layout_marginStart="@dimen/___10sdp" android:layout_marginEnd="@dimen/___10sdp"/>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/llFamilyPlan"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/___40sdp"
+                                android:layout_marginTop="@dimen/___10sdp"
+                                android:layout_marginEnd="@dimen/___10sdp"
+                                android:layout_marginBottom="@dimen/___10sdp"
+                                android:layout_weight="1"
+                                android:background="@drawable/border_bg_white_corner"
+                                android:elevation="@dimen/___5sdp"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/___10sdp"
+                                    app:srcCompat="@drawable/ic_family_plan_icon__" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="@dimen/___10sdp"
+                                    android:background="@drawable/family_plan_background"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <com.ucare.we.view.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginStart="@dimen/___10sdp"
+                                        android:layout_marginEnd="@dimen/___10sdp"
+                                        android:gravity="center"
+                                        android:text="@string/home_family_plan"
+                                        android:textColor="#ffffff"
+                                        android:textSize="@dimen/___12ssp" />
                                 </androidx.appcompat.widget.LinearLayoutCompat>
                             </androidx.appcompat.widget.LinearLayoutCompat>
-                            <androidx.appcompat.widget.LinearLayoutCompat android:visibility="gone" android:layout_width="0dp" android:layout_height="@dimen/___40sdp" android:layout_margin="@dimen/___10sdp" android:layout_weight="1"/>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/___40sdp"
+                                android:layout_margin="@dimen/___10sdp"
+                                android:layout_weight="1"
+                                android:visibility="gone" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
                     </androidx.appcompat.widget.LinearLayoutCompat>
                 </RelativeLayout>
-                <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent" android:layout_height="@dimen/___66sdp"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/___66sdp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.core.widget.NestedScrollView>
     </androidx.appcompat.widget.LinearLayoutCompat>

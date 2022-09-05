@@ -1,20 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/toolbar"/>
-    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <LinearLayout android:orientation="vertical" android:id="@+id/lnrNumber" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___5sdp" android:layout_below="@+id/txtTitle" android:layoutDirection="locale" app:layout_constraintTop_toBottomOf="@+id/txtTitle">
-                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___10sdp" android:textColor="@color/color_grey_new" android:id="@+id/current_balance" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tv_current_balance" android:layout_below="@+id/app_bar_layout" android:textAlignment="center" android:layout_marginStart="@dimen/___16sdp" android:layout_marginEnd="@dimen/___10sdp" app:layout_constraintBottom_toTopOf="@+id/btn_current_number" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/MontserratRegular"/>
-                <com.ucare.we.view.AppCompatTextView android:textSize="20sp" android:textColor="@color/color_black_new" android:id="@+id/btn_current_balance" android:layout_width="wrap_content" android:layout_height="@dimen/account_button_height" android:layout_marginTop="@dimen/___5sdp" android:layout_marginStart="@dimen/___16sdp" style="@style/MontserratMedium"/>
-                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___10sdp" android:textColor="@color/color_grey_new" android:id="@+id/current_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_you_are_managing" android:layout_below="@+id/app_bar_layout" android:textAlignment="center" android:layout_marginStart="@dimen/___16sdp" android:layout_marginEnd="@dimen/___10sdp" app:layout_constraintBottom_toTopOf="@+id/btn_current_number" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/MontserratRegular"/>
-                <Button android:textSize="20sp" android:textColor="@color/color_black_new" android:id="@+id/btn_current_number" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="24dp" android:layout_marginTop="@dimen/___5sdp" android:layout_marginStart="@dimen/___16sdp" style="@style/MontserratMedium"/>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lnrNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTitle"
+                android:layout_marginTop="@dimen/___5sdp"
+                android:layoutDirection="locale"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/txtTitle">
+
+                <com.ucare.we.view.AppCompatTextView
+                    android:id="@+id/current_balance"
+                    style="@style/MontserratRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/app_bar_layout"
+                    android:layout_marginStart="@dimen/___16sdp"
+                    android:layout_marginEnd="@dimen/___10sdp"
+                    android:text="@string/tv_current_balance"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_grey_new"
+                    android:textSize="@dimen/___10sdp"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_current_number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.ucare.we.view.AppCompatTextView
+                    android:id="@+id/btn_current_balance"
+                    style="@style/MontserratMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/account_button_height"
+                    android:layout_marginStart="@dimen/___16sdp"
+                    android:layout_marginTop="@dimen/___5sdp"
+                    android:textColor="@color/color_black_new"
+                    android:textSize="20sp" />
+
+                <com.ucare.we.view.AppCompatTextView
+                    android:id="@+id/current_number"
+                    style="@style/MontserratRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/app_bar_layout"
+                    android:layout_marginStart="@dimen/___16sdp"
+                    android:layout_marginEnd="@dimen/___10sdp"
+                    android:text="@string/home_you_are_managing"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_grey_new"
+                    android:textSize="@dimen/___10sdp"
+                    app:layout_constraintBottom_toTopOf="@+id/btn_current_number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/btn_current_number"
+                    style="@style/MontserratMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="@dimen/___16sdp"
+                    android:layout_marginTop="@dimen/___5sdp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/color_black_new"
+                    android:textSize="20sp" />
             </LinearLayout>
-            <Button android:textColor="@color/color_dark_purple_new" android:id="@+id/btn_recharge" android:background="@drawable/rounded_corner_button_stroke_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/viewpager_top_margin" android:text="@string/recharge" android:textAllCaps="false" android:layout_marginStart="@dimen/___40sdp" android:layout_marginEnd="@dimen/___40sdp"/>
-            <Button android:textColor="@color/color_dark_purple_new" android:id="@+id/btn_balance_transfer" android:background="@drawable/rounded_corner_button_stroke_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___15sdp" android:text="@string/balance_transfer" android:textAllCaps="false" android:layout_marginStart="@dimen/___40sdp" android:layout_marginEnd="@dimen/___40sdp"/>
-            <Button android:textColor="@color/color_dark_purple_new" android:id="@+id/btn_quota_transfer" android:background="@drawable/rounded_corner_button_stroke_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___15sdp" android:text="@string/quota_transfer" android:textAllCaps="false" android:layout_marginStart="@dimen/___40sdp" android:layout_marginEnd="@dimen/___40sdp"/>
-            <Button android:textColor="@color/color_dark_purple_new" android:id="@+id/btn_payment_history" android:background="@drawable/rounded_corner_button_stroke_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___15sdp" android:text="@string/balance_details" android:textAllCaps="false" android:layout_marginStart="@dimen/___40sdp" android:layout_marginEnd="@dimen/___40sdp"/>
-            <Button android:textColor="@color/color_dark_purple_new" android:id="@+id/btn_balance_transfer_history" android:background="@drawable/rounded_corner_button_stroke_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___15sdp" android:text="@string/balance_transfer_history" android:textAllCaps="false" android:layout_marginStart="@dimen/___40sdp" android:layout_marginEnd="@dimen/___40sdp"/>
-            <Button android:textColor="@color/color_dark_purple_new" android:id="@+id/btn_auto_recharge" android:background="@drawable/rounded_corner_button_stroke_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___15sdp" android:text="@string/Auto_recharge" android:textAllCaps="false" android:layout_marginStart="@dimen/___40sdp" android:layout_marginEnd="@dimen/___40sdp"/>
+
+            <Button
+                android:id="@+id/btn_recharge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/___40sdp"
+                android:layout_marginTop="@dimen/viewpager_top_margin"
+                android:layout_marginEnd="@dimen/___40sdp"
+                android:background="@drawable/rounded_corner_button_stroke_white"
+                android:text="@string/recharge"
+                android:textAllCaps="false"
+                android:textColor="@color/color_dark_purple_new" />
+
+            <Button
+                android:id="@+id/btn_balance_transfer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/___40sdp"
+                android:layout_marginTop="@dimen/___15sdp"
+                android:layout_marginEnd="@dimen/___40sdp"
+                android:background="@drawable/rounded_corner_button_stroke_white"
+                android:text="@string/balance_transfer"
+                android:textAllCaps="false"
+                android:textColor="@color/color_dark_purple_new" />
+
+            <Button
+                android:id="@+id/btn_quota_transfer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/___40sdp"
+                android:layout_marginTop="@dimen/___15sdp"
+                android:layout_marginEnd="@dimen/___40sdp"
+                android:background="@drawable/rounded_corner_button_stroke_white"
+                android:text="@string/quota_transfer"
+                android:textAllCaps="false"
+                android:textColor="@color/color_dark_purple_new" />
+
+            <Button
+                android:id="@+id/btn_payment_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/___40sdp"
+                android:layout_marginTop="@dimen/___15sdp"
+                android:layout_marginEnd="@dimen/___40sdp"
+                android:background="@drawable/rounded_corner_button_stroke_white"
+                android:text="@string/balance_details"
+                android:textAllCaps="false"
+                android:textColor="@color/color_dark_purple_new" />
+
+            <Button
+                android:id="@+id/btn_balance_transfer_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/___40sdp"
+                android:layout_marginTop="@dimen/___15sdp"
+                android:layout_marginEnd="@dimen/___40sdp"
+                android:background="@drawable/rounded_corner_button_stroke_white"
+                android:text="@string/balance_transfer_history"
+                android:textAllCaps="false"
+                android:textColor="@color/color_dark_purple_new" />
+
+            <Button
+                android:id="@+id/btn_auto_recharge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/___40sdp"
+                android:layout_marginTop="@dimen/___15sdp"
+                android:layout_marginEnd="@dimen/___40sdp"
+                android:background="@drawable/rounded_corner_button_stroke_white"
+                android:text="@string/Auto_recharge"
+                android:textAllCaps="false"
+                android:textColor="@color/color_dark_purple_new" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

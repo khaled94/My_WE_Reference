@@ -1,34 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/color_background" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
-    <include layout="@layout/toolbar"/>
-    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true" app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/dimen_17sp" android:textColor="@color/black_light" android:id="@+id/ticketID" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_25" android:layout_marginTop="@dimen/margin_15" android:layout_marginRight="@dimen/margin_25" android:layout_marginBottom="@dimen/dimen_18dp" android:text="@string/Ticket_id" style="@style/MontserratSemiBold"/>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_25" android:layout_marginTop="@dimen/dimen_23dp" android:layout_marginRight="@dimen/margin_25">
-                <ImageView android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginRight="@dimen/dimen_3dp" app:srcCompat="@drawable/dot_drawable"/>
-                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/black_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/service_number" style="@style/MontserratRegular"/>
-                    <EditText android:textSize="@dimen/text_size_15sp" android:textColor="@color/black" android:textColorHint="@color/black_light" android:id="@+id/serviceNumber" android:background="@drawable/edit_text_underline_new" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="8dp" android:hint="@string/number" style="@style/MontserratRegular"/>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.ucare.we.view.AppCompatTextView
+                android:id="@+id/ticketID"
+                style="@style/MontserratSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_marginTop="@dimen/margin_15"
+                android:layout_marginRight="@dimen/margin_25"
+                android:layout_marginBottom="@dimen/dimen_18dp"
+                android:text="@string/Ticket_id"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/dimen_17sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_marginTop="@dimen/dimen_23dp"
+                android:layout_marginRight="@dimen/margin_25">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="@dimen/dimen_3dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/dot_drawable" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.ucare.we.view.AppCompatTextView
+                        style="@style/MontserratRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/service_number"
+                        android:textColor="@color/black_light"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <EditText
+                        android:id="@+id/serviceNumber"
+                        style="@style/MontserratRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/edit_text_underline_new"
+                        android:hint="@string/number"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black_light"
+                        android:textSize="@dimen/text_size_15sp" />
                 </LinearLayout>
             </LinearLayout>
-            <include layout="@layout/line_divider"/>
-            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_25" android:layout_marginTop="@dimen/dimen_23dp" android:layout_marginRight="@dimen/margin_25">
-                <ImageView android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginRight="@dimen/dimen_3dp" app:srcCompat="@drawable/dot_drawable"/>
-                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-                    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/black_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ticket_status" style="@style/MontserratRegular"/>
-                    <EditText android:textSize="@dimen/text_size_15sp" android:textColor="@color/black" android:textColorHint="@color/black_light" android:id="@+id/ticketStatus" android:background="@drawable/edit_text_underline_new" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="8dp" android:hint="@string/number" style="@style/MontserratRegular"/>
+
+            <include layout="@layout/line_divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_marginTop="@dimen/dimen_23dp"
+                android:layout_marginRight="@dimen/margin_25"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="@dimen/dimen_3dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/dot_drawable" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.ucare.we.view.AppCompatTextView
+                        style="@style/MontserratRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ticket_status"
+                        android:textColor="@color/black_light"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <EditText
+                        android:id="@+id/ticketStatus"
+                        style="@style/MontserratRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/edit_text_underline_new"
+                        android:hint="@string/number"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black_light"
+                        android:textSize="@dimen/text_size_15sp" />
                 </LinearLayout>
             </LinearLayout>
-            <include layout="@layout/line_divider"/>
-            <com.google.android.material.textfield.TextInputLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/text_input_bottom_margin" android:layout_marginBottom="@dimen/text_input_bottom_margin" app:hintTextAppearance="@style/TextLabel" style="@style/MyriadProSemiBold">
-                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_size_15sp" android:textColor="@color/black_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_25" android:layout_marginTop="@dimen/margin_25" android:layout_marginRight="@dimen/margin_25" android:text="@string/attach_image" android:inputType="number" style="@style/MontserratSemiBold"/>
+
+            <include layout="@layout/line_divider" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/MyriadProSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_input_bottom_margin"
+                android:layout_marginBottom="@dimen/text_input_bottom_margin"
+                app:hintTextAppearance="@style/TextLabel">
+
+                <com.ucare.we.view.AppCompatTextView
+                    style="@style/MontserratSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_25"
+                    android:layout_marginTop="@dimen/margin_25"
+                    android:layout_marginRight="@dimen/margin_25"
+                    android:inputType="number"
+                    android:text="@string/attach_image"
+                    android:textColor="@color/black_light"
+                    android:textSize="@dimen/text_size_15sp" />
             </com.google.android.material.textfield.TextInputLayout>
-            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_25">
-                <ImageView android:textSize="@dimen/dimen_16sp" android:id="@+id/addImage" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginLeft="@dimen/margin_25" android:layout_marginStart="@dimen/margin_25" app:srcCompat="@drawable/ic_upload_image" style="@style/MontserratBold"/>
-                <androidx.recyclerview.widget.RecyclerView android:id="@+id/imagesRecyclerView" android:layout_width="wrap_content" android:layout_height="@dimen/margin_50" android:layout_marginLeft="@dimen/margin_10" android:layout_marginStart="@dimen/margin_10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_25">
+
+                <ImageView
+                    android:id="@+id/addImage"
+                    style="@style/MontserratBold"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/margin_25"
+                    android:layout_marginLeft="@dimen/margin_25"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:srcCompat="@drawable/ic_upload_image" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/imagesRecyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/margin_50"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:layout_marginLeft="@dimen/margin_10" />
             </LinearLayout>
-            <LinearLayout android:paddingLeft="@dimen/fab_margin" android:paddingRight="@dimen/fab_margin" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="@dimen/margin_25" android:layout_marginBottom="@dimen/margin_25" android:layout_weight="1">
-                <Button android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_send_ticket" android:background="@drawable/new_rounded_corner_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/update_ticket" android:textAllCaps="false" android:textAlignment="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/margin_25"
+                android:layout_marginBottom="@dimen/margin_25"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/fab_margin"
+                android:paddingRight="@dimen/fab_margin">
+
+                <Button
+                    android:id="@+id/btn_send_ticket"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/new_rounded_corner_button"
+                    android:gravity="center"
+                    android:text="@string/update_ticket"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
             </LinearLayout>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.core.widget.NestedScrollView>

@@ -1,13 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent">
-    <View android:layout_width="match_parent" android:layout_height="match_parent"/>
-    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/childContainer" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@+id/btn_add_account_container" app:layout_constraintEnd_toEndOf="0" app:layout_constraintHeight="-4" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" app:layout_constraintVertical_bias="0">
-        <ImageView android:id="@+id/bottomSheetGrapple" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0" app:srcCompat="@drawable/ic_bottom_sheet_grapple"/>
-        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___13ssp" android:textColor="@color/color_black_new" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/my_we_accounts" android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/bottomSheetGrapple" style="@style/MontserratSemiBold"/>
-        <com.ucare.we.view.AppCompatTextView android:textColor="@color/color_black_new" android:gravity="start" android:id="@+id/tv_no_accounts" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___40sdp" android:text="@string/you_don_t_have_account_to_switch_to" android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="@+id/tv_title" app:layout_constraintTop_toTopOf="@+id/tv_title" style="@style/MontserratSemiBold"/>
-        <androidx.recyclerview.widget.RecyclerView android:orientation="vertical" android:id="@+id/rv_account" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="16dp" android:layout_marginBottom="@dimen/___50sdp" android:requiresFadingEdge="vertical" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintHeight="-4" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/tv_title" app:layout_constraintVertical_bias="0"/>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/childContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btn_add_account_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+        <ImageView
+            android:id="@+id/bottomSheetGrapple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_bottom_sheet_grapple" />
+
+        <com.ucare.we.view.AppCompatTextView
+            android:id="@+id/tv_title"
+            style="@style/MontserratSemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/my_we_accounts"
+            android:textColor="@color/color_black_new"
+            android:textSize="@dimen/___13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottomSheetGrapple" />
+
+        <com.ucare.we.view.AppCompatTextView
+            android:id="@+id/tv_no_accounts"
+            style="@style/MontserratSemiBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/___40sdp"
+            android:gravity="start"
+            android:text="@string/you_don_t_have_account_to_switch_to"
+            android:textColor="@color/color_black_new"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_account"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="@dimen/___50sdp"
+            android:orientation="vertical"
+            android:requiresFadingEdge="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            app:layout_constraintVertical_bias="0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <FrameLayout android:id="@+id/btn_add_account_container" android:background="@drawable/background_bottom_sheet" android:paddingBottom="@dimen/___32sdp" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0">
-        <Button android:textSize="@dimen/___13ssp" android:textColor="@color/white" android:id="@+id/btn_add_account" android:background="@drawable/new_rounded_corner_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/add_new_account" android:textAllCaps="false" android:fontFamily="@font/montserrat_semi_bold" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"/>
+
+    <FrameLayout
+        android:id="@+id/btn_add_account_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_bottom_sheet"
+        android:paddingBottom="@dimen/___32sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btn_add_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/new_rounded_corner_button"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/add_new_account"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/___13ssp" />
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

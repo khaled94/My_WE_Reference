@@ -1,38 +1,343 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@+id/root" android:background="@drawable/bg_login" android:layout_width="match_parent" android:layout_height="match_parent">
-    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/rlHeader" android:background="@drawable/bg_login" android:layout_width="match_parent" android:layout_height="@dimen/___200sdp" app:layout_constraintTop_toTopOf="0">
-        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___21ssp" android:textColor="@color/white" android:gravity="start" android:id="@+id/tvWelcome" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="40dp" android:text="@string/loginWelcomeMessage" android:layout_marginStart="@dimen/___15sdp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="@+id/imgBackButton" app:layout_constraintTop_toBottomOf="@+id/imgPayBill" style="@style/MontserratMedium"/>
-        <ImageView android:layout_width="@dimen/___25sdp" android:layout_height="@dimen/___25sdp" android:layout_marginStart="@dimen/___10sdp" app:layout_constraintBottom_toBottomOf="@+id/tvWelcome" app:layout_constraintStart_toEndOf="@+id/tvWelcome" app:srcCompat="@drawable/ic_welcone_login"/>
-        <ImageView android:id="@+id/imgBackButton" android:padding="@dimen/back_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/back_margin_start" android:layout_marginTop="@dimen/back_margin_top" android:layout_marginStart="@dimen/back_margin_start" android:layout_alignParentStart="true" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" app:srcCompat="@drawable/icon_back_arrow"/>
-        <Button android:textSize="@dimen/___10ssp" android:textColor="@color/color_dark_purple_new" android:layout_gravity="end" android:id="@+id/ibLoginActivity_discoverWE" android:background="@drawable/bg_border_white_new" android:layout_width="@dimen/___110sdp" android:layout_height="@dimen/___32sdp" android:layout_marginTop="@dimen/___49sdp" android:scaleType="fitCenter" android:text="@string/txtDiscoverWe" android:textAllCaps="false" android:paddingStart="@dimen/___10sdp" android:paddingEnd="@dimen/___10sdp" android:layout_marginEnd="@dimen/margin_20" android:layout_alignParentEnd="true" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0" app:srcCompat="@drawable/discover_we_button" style="@style/MontserratBold"/>
-        <Button android:textSize="@dimen/___10ssp" android:textColor="@color/white" android:layout_gravity="end" android:id="@+id/imgPayBill" android:background="@drawable/bg_border_white_stroke_new" android:layout_width="@dimen/___110sdp" android:layout_height="@dimen/___32sdp" android:layout_marginTop="@dimen/___12sdp" android:scaleType="fitCenter" android:text="@string/pay_bill" android:layout_below="@+id/ibLoginActivity_discoverWE" android:textAllCaps="false" android:paddingStart="@dimen/___10sdp" android:paddingEnd="@dimen/___10sdp" android:layout_marginEnd="@dimen/margin_20" android:layout_alignParentEnd="true" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toBottomOf="@+id/ibLoginActivity_discoverWE" app:srcCompat="@drawable/discover_we_button" style="@style/MontserratBold"/>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/___200sdp"
+        android:background="@drawable/bg_login"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.ucare.we.view.AppCompatTextView
+            android:id="@+id/tvWelcome"
+            style="@style/MontserratMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/___15sdp"
+            android:layout_marginBottom="40dp"
+            android:gravity="start"
+            android:text="@string/loginWelcomeMessage"
+            android:textColor="@color/white"
+            android:textSize="@dimen/___21ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imgBackButton"
+            app:layout_constraintTop_toBottomOf="@+id/imgPayBill" />
+
+        <ImageView
+            android:layout_width="@dimen/___25sdp"
+            android:layout_height="@dimen/___25sdp"
+            android:layout_marginStart="@dimen/___10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvWelcome"
+            app:layout_constraintStart_toEndOf="@+id/tvWelcome"
+            app:srcCompat="@drawable/ic_welcone_login" />
+
+        <ImageView
+            android:id="@+id/imgBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/back_margin_start"
+            android:layout_marginLeft="@dimen/back_margin_start"
+            android:layout_marginTop="@dimen/back_margin_top"
+            android:padding="@dimen/back_padding"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icon_back_arrow" />
+
+        <Button
+            android:id="@+id/ibLoginActivity_discoverWE"
+            style="@style/MontserratBold"
+            android:layout_width="@dimen/___110sdp"
+            android:layout_height="@dimen/___32sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/___49sdp"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:background="@drawable/bg_border_white_new"
+            android:paddingStart="@dimen/___10sdp"
+            android:paddingEnd="@dimen/___10sdp"
+            android:scaleType="fitCenter"
+            android:text="@string/txtDiscoverWe"
+            android:textAllCaps="false"
+            android:textColor="@color/color_dark_purple_new"
+            android:textSize="@dimen/___10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/discover_we_button" />
+
+        <Button
+            android:id="@+id/imgPayBill"
+            style="@style/MontserratBold"
+            android:layout_width="@dimen/___110sdp"
+            android:layout_height="@dimen/___32sdp"
+            android:layout_below="@+id/ibLoginActivity_discoverWE"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/___12sdp"
+            android:layout_marginEnd="@dimen/margin_20"
+            android:background="@drawable/bg_border_white_stroke_new"
+            android:paddingStart="@dimen/___10sdp"
+            android:paddingEnd="@dimen/___10sdp"
+            android:scaleType="fitCenter"
+            android:text="@string/pay_bill"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/___10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ibLoginActivity_discoverWE"
+            app:srcCompat="@drawable/discover_we_button" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <ScrollView android:id="@+id/top" android:background="@drawable/bg_border_auth" android:layout_width="0dp" android:layout_height="0dp" android:layout_marginTop="-10dp" android:fillViewport="true" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintHorizontal_bias="1" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toBottomOf="@+id/rlHeader" app:layout_constraintVertical_bias="0">
-        <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___19ssp" android:textColor="@color/black_light" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___30sdp" android:text="@string/login" android:layout_marginStart="@dimen/___15sdp" android:layout_marginEnd="@dimen/___16sdp" style="@style/MontserratBold"/>
-            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___9ssp" android:textColor="@color/black_light" android:id="@+id/tv_header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/signInHint" android:layout_marginStart="@dimen/___15sdp" android:layout_marginEnd="@dimen/___16sdp" style="@style/MontserratRegular"/>
-            <com.google.android.material.textfield.TextInputLayout android:id="@+id/etServiceNumber" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___25sdp" android:layout_marginStart="@dimen/___15sdp" android:layout_marginEnd="@dimen/___16sdp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
-                <com.google.android.material.textfield.TextInputEditText android:textSize="@dimen/___14ssp" android:textColor="@color/color_black_new" android:textColorHint="@color/color_grey_new" android:id="@+id/etMobile" android:background="@drawable/text_input_white_background" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="@string/username_mobile_number" android:maxLength="11" android:digits="1234567890٠١٢٣٤٥٦٧٨٩" android:inputType="phone" android:imeOptions="actionNext" android:textAlignment="viewStart" style="@style/MontserratRegular"/>
+
+    <ScrollView
+        android:id="@+id/top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="-10dp"
+        android:background="@drawable/bg_border_auth"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlHeader"
+        app:layout_constraintVertical_bias="0">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.ucare.we.view.AppCompatTextView
+                style="@style/MontserratBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/___15sdp"
+                android:layout_marginTop="@dimen/___30sdp"
+                android:layout_marginEnd="@dimen/___16sdp"
+                android:text="@string/login"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/___19ssp" />
+
+            <com.ucare.we.view.AppCompatTextView
+                android:id="@+id/tv_header"
+                style="@style/MontserratRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/___15sdp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/___16sdp"
+                android:text="@string/signInHint"
+                android:textColor="@color/black_light"
+                android:textSize="@dimen/___9ssp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etServiceNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/___15sdp"
+                android:layout_marginTop="@dimen/___25sdp"
+                android:layout_marginEnd="@dimen/___16sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMobile"
+                    style="@style/MontserratRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/text_input_white_background"
+                    android:digits="1234567890٠١٢٣٤٥٦٧٨٩"
+                    android:hint="@string/username_mobile_number"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/color_black_new"
+                    android:textColorHint="@color/color_grey_new"
+                    android:textSize="@dimen/___14ssp" />
             </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout android:id="@+id/password_input_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___11sdp" android:layout_marginStart="@dimen/___15sdp" android:layout_marginEnd="@dimen/___16sdp" app:errorIconDrawable="@null" app:layout_constraintBottom_toTopOf="@+id/btn_add_account" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/mobile_number_input_layout" app:layout_constraintVertical_bias="0" app:passwordToggleDrawable="@drawable/ic_password_visibility_selector" app:passwordToggleEnabled="true">
-                <com.google.android.material.textfield.TextInputEditText android:textSize="@dimen/___14ssp" android:textColor="@color/color_black_new" android:id="@+id/et_password" android:background="@drawable/text_input_white_background" android:paddingTop="16dp" android:paddingBottom="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/password" android:inputType="textPassword" android:imeOptions="actionDone" android:textAlignment="viewStart" style="@style/MontserratRegular"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/___15sdp"
+                android:layout_marginTop="@dimen/___11sdp"
+                android:layout_marginEnd="@dimen/___16sdp"
+                app:errorIconDrawable="@null"
+                app:layout_constraintBottom_toTopOf="@+id/btn_add_account"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mobile_number_input_layout"
+                app:layout_constraintVertical_bias="0"
+                app:passwordToggleDrawable="@drawable/ic_password_visibility_selector"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_password"
+                    style="@style/MontserratRegular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_input_white_background"
+                    android:hint="@string/password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/color_black_new"
+                    android:textSize="@dimen/___14ssp" />
             </com.google.android.material.textfield.TextInputLayout>
-            <Button android:textSize="@dimen/___11ssp" android:textColor="#682f90" android:layout_gravity="end" android:id="@+id/tv_forget_Password" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___5sdp" android:text="@string/forget_password" android:maxLines="1" android:textAllCaps="false" android:layout_marginStart="@dimen/___15sdp" android:layout_marginEnd="@dimen/___16sdp" android:stateListAnimator="@null"/>
-            <Button android:textSize="@dimen/___13ssp" android:textColor="@color/white" android:gravity="center" android:id="@+id/btn_sign_in" android:background="@drawable/new_rounded_corner_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___5sdp" android:text="@string/login" android:textAllCaps="false" android:textAlignment="center" android:layout_marginStart="@dimen/___15sdp" android:layout_marginEnd="@dimen/___16sdp"/>
-            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="@dimen/single_space_margin" android:weightSum="3">
-                <View android:background="@color/store_separator_color" android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1.1"/>
-                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___11ssp" android:textColor="@color/black_light" android:gravity="center" android:layout_gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/or_sign_in_with" android:layout_weight="0.8" style="@style/MontserratRegular"/>
-                <View android:background="@color/store_separator_color" android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1.1"/>
+
+            <Button
+                android:id="@+id/tv_forget_Password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginStart="@dimen/___15sdp"
+                android:layout_marginTop="@dimen/___5sdp"
+                android:layout_marginEnd="@dimen/___16sdp"
+                android:background="@android:color/transparent"
+                android:maxLines="1"
+                android:stateListAnimator="@null"
+                android:text="@string/forget_password"
+                android:textAllCaps="false"
+                android:textColor="#682f90"
+                android:textSize="@dimen/___11ssp" />
+
+            <Button
+                android:id="@+id/btn_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/___15sdp"
+                android:layout_marginTop="@dimen/___5sdp"
+                android:layout_marginEnd="@dimen/___16sdp"
+                android:background="@drawable/new_rounded_corner_button"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/___13ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="@dimen/single_space_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1.1"
+                    android:background="@color/store_separator_color" />
+
+                <com.ucare.we.view.AppCompatTextView
+                    style="@style/MontserratRegular"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:text="@string/or_sign_in_with"
+                    android:textColor="@color/black_light"
+                    android:textSize="@dimen/___11ssp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1.1"
+                    android:background="@color/store_separator_color" />
             </LinearLayout>
-            <com.ucare.we.view.AppCompatTextView android:textColor="@color/black_light" android:layout_gravity="center_horizontal" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/or_sign_in_with" android:layout_marginStart="@dimen/margin_15" android:layout_marginEnd="@dimen/margin_15"/>
-            <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp" android:layout_marginStart="@dimen/___15sdp" android:layout_marginEnd="@dimen/___16sdp">
-                <ImageView android:id="@+id/btnLoginUsingGoogle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="15dp" app:srcCompat="@drawable/ic_google"/>
-                <ImageView android:id="@+id/btnLoginUsingFacebook" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="15dp" app:srcCompat="@drawable/ic_facebook"/>
-                <ImageView android:id="@+id/btnLoginUsingHuawei" android:background="@drawable/ic_red_bg" android:padding="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_hw_logo"/>
+
+            <com.ucare.we.view.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/margin_15"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/margin_15"
+                android:text="@string/or_sign_in_with"
+                android:textColor="@color/black_light"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/___15sdp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/___16sdp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/btnLoginUsingGoogle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    app:srcCompat="@drawable/ic_google" />
+
+                <ImageView
+                    android:id="@+id/btnLoginUsingFacebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    app:srcCompat="@drawable/ic_facebook" />
+
+                <ImageView
+                    android:id="@+id/btnLoginUsingHuawei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_red_bg"
+                    android:padding="6dp"
+                    app:srcCompat="@drawable/ic_hw_logo" />
             </androidx.appcompat.widget.LinearLayoutCompat>
-            <androidx.appcompat.widget.LinearLayoutCompat android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/single_space_margin" android:layout_marginBottom="@dimen/single_space_margin" android:layout_marginStart="@dimen/___15sdp" android:layout_marginEnd="@dimen/___16sdp">
-                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___11ssp" android:textColor="@color/black_light" android:gravity="start|center_vertical" android:id="@+id/tv_dont_have_account" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dont_have_account" style="@style/MontserratRegular"/>
-                <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___11ssp" android:textColor="#682f90" android:id="@+id/tv_sign_up" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/single_space_margin" android:layout_marginRight="@dimen/single_space_margin" android:text="@string/sign_up" style="@style/MontserratSemiBold"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/___15sdp"
+                android:layout_marginTop="@dimen/single_space_margin"
+                android:layout_marginEnd="@dimen/___16sdp"
+                android:layout_marginBottom="@dimen/single_space_margin"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.ucare.we.view.AppCompatTextView
+                    android:id="@+id/tv_dont_have_account"
+                    style="@style/MontserratRegular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/dont_have_account"
+                    android:textColor="@color/black_light"
+                    android:textSize="@dimen/___11ssp" />
+
+                <com.ucare.we.view.AppCompatTextView
+                    android:id="@+id/tv_sign_up"
+                    style="@style/MontserratSemiBold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/single_space_margin"
+                    android:layout_marginRight="@dimen/single_space_margin"
+                    android:text="@string/sign_up"
+                    android:textColor="#682f90"
+                    android:textSize="@dimen/___11ssp" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>

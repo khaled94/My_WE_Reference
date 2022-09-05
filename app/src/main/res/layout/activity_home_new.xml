@@ -1,7 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main_content" android:background="@color/color_background" android:fitsSystemWindows="true" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="match_parent">
-    <androidx.fragment.app.FragmentContainerView android:id="@+id/homeFragmentsContainer" android:layout_width="match_parent" android:layout_height="match_parent"/>
-    <com.ucare.we.view.FabBottomNavigation android:theme="@style/BottomNavigationView" android:layout_gravity="bottom" android:id="@+id/fab_bottom_bar" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/___60sdp" android:layout_alignParentBottom="true" app:background_color="@color/white" app:corner_radius="16dp" app:fab_cradle_margin="15dp" app:fab_cradle_rounded_corner_radius="12dp" app:fab_size="50dp" app:itemBackground="@drawable/bottom_navigation_line_selector" app:itemTextColor="@color/bottom_nav_text_color_selector" app:labelVisibilityMode="1" app:menu="@menu/bottom_nav_menu"/>
-    <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/fab" android:focusable="true" android:clickable="true" android:clipChildren="false" android:layout_width="wrap_content" android:layout_height="wrap_content" app:backgroundTint="@color/white" app:elevation="@dimen/___2sdp" app:fabCustomSize="64dp" app:layout_anchor="@+id/fab_bottom_bar" app:layout_anchorGravity="0x1" app:maxImageSize="34dp" app:srcCompat="@drawable/ic_chat_icon"/>
-    <androidx.appcompat.widget.LinearLayoutCompat android:id="@+id/llMask" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:elevation="17dp"/>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:clipChildren="false"
+    android:fitsSystemWindows="true">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/homeFragmentsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.ucare.we.view.FabBottomNavigation
+        android:id="@+id/fab_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:clipChildren="false"
+        android:minHeight="@dimen/___60sdp"
+        android:theme="@style/BottomNavigationView"
+        app:background_color="@color/white"
+        app:corner_radius="16dp"
+        app:fab_cradle_margin="15dp"
+        app:fab_cradle_rounded_corner_radius="12dp"
+        app:fab_size="50dp"
+        app:itemBackground="@drawable/bottom_navigation_line_selector"
+        app:itemTextColor="@color/bottom_nav_text_color_selector"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:clipChildren="false"
+        android:focusable="true"
+        app:backgroundTint="@color/white"
+        app:elevation="@dimen/___2sdp"
+        app:fabCustomSize="64dp"
+        app:layout_anchor="@+id/fab_bottom_bar"
+        app:layout_anchorGravity="bottom"
+        app:maxImageSize="34dp"
+        app:srcCompat="@drawable/ic_chat_icon" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llMask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:elevation="17dp"
+        android:focusable="true" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

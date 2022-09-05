@@ -1,20 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
-    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp">
-            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:layout_gravity="center_horizontal" android:id="@+id/tv_account_password" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/account_password" style="@style/MyriadProRegular"/>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.ucare.we.view.AppCompatTextView
+                android:id="@+id/tv_account_password"
+                style="@style/MyriadProRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/account_password"
+                android:textSize="@dimen/slider_text_small_new" />
         </LinearLayout>
-        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="15dp" android:layout_marginBottom="5dp" android:layout_marginStart="15dp" android:layout_marginEnd="15dp" app:hintTextAppearance="@style/TextLabel" app:passwordToggleDrawable="@drawable/ic_password_visibility_selector" app:passwordToggleEnabled="true">
-            <com.ucare.we.presentation.auth.signin.NoMenuEditText android:textSize="@dimen/edit_text_hint_size" android:layout_gravity="start" android:id="@+id/et_password_1" android:background="@drawable/text_input_white_background" android:longClickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/your_password" android:inputType="textPassword" android:textAlignment="viewStart" style="@style/MyriadProRegularLeft"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            app:hintTextAppearance="@style/TextLabel"
+            app:passwordToggleDrawable="@drawable/ic_password_visibility_selector"
+            app:passwordToggleEnabled="true">
+
+            <com.ucare.we.presentation.auth.signin.NoMenuEditText
+                android:id="@+id/et_password_1"
+                style="@style/MyriadProRegularLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@drawable/text_input_white_background"
+                android:hint="@string/your_password"
+                android:inputType="textPassword"
+                android:longClickable="false"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/edit_text_hint_size" />
         </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="15dp" android:layout_marginBottom="5dp" android:layout_marginStart="15dp" android:layout_marginEnd="15dp" app:hintTextAppearance="@style/TextLabel" app:passwordToggleDrawable="@drawable/ic_password_visibility_selector" app:passwordToggleEnabled="true">
-            <com.ucare.we.presentation.auth.signin.NoMenuEditText android:textSize="@dimen/edit_text_hint_size" android:layout_gravity="start" android:id="@+id/et_password_2" android:background="@drawable/text_input_white_background" android:longClickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/confirm_password" android:inputType="textPassword" android:textAlignment="viewStart" style="@style/MyriadProRegularLeft"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            app:hintTextAppearance="@style/TextLabel"
+            app:passwordToggleDrawable="@drawable/ic_password_visibility_selector"
+            app:passwordToggleEnabled="true">
+
+            <com.ucare.we.presentation.auth.signin.NoMenuEditText
+                android:id="@+id/et_password_2"
+                style="@style/MyriadProRegularLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@drawable/text_input_white_background"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:longClickable="false"
+                android:textAlignment="viewStart"
+                android:textSize="@dimen/edit_text_hint_size" />
         </com.google.android.material.textfield.TextInputLayout>
-        <LinearLayout android:orientation="horizontal" android:id="@+id/layout_agree" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/button_left_margin" android:layout_marginTop="@dimen/margin_10" android:layout_marginRight="@dimen/button_left_margin" android:layout_marginBottom="@dimen/margin_10">
-            <CheckBox android:id="@+id/cb_terms_and_conditions" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textColor="@color/colorPrimary" android:id="@+id/tv_terms_and_conditions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/terms_and_conditions" android:layout_marginStart="5dp" style="@style/MyriadProSemiBold"/>
+
+        <LinearLayout
+            android:id="@+id/layout_agree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/button_left_margin"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginRight="@dimen/button_left_margin"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_terms_and_conditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.ucare.we.view.AppCompatTextView
+                android:id="@+id/tv_terms_and_conditions"
+                style="@style/MyriadProSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/terms_and_conditions"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/slider_text_small_new" />
         </LinearLayout>
-        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:textColor="@color/red" android:id="@+id/tv_error" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="17dp" android:layout_marginTop="10dp" android:layout_marginRight="17dp" android:layout_marginStart="17dp" android:layout_marginEnd="17dp"/>
-        <Button android:textColor="@color/colorPrimary" android:layout_gravity="center_horizontal" android:id="@+id/btn_continue_3" android:background="@drawable/rounded_corner_button_with_border" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/button_left_margin" android:layout_marginTop="10dp" android:layout_marginRight="@dimen/button_left_margin" android:text="@string/btn_next" android:textAllCaps="false"/>
+
+        <com.ucare.we.view.AppCompatTextView
+            android:id="@+id/tv_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="17dp"
+            android:textColor="@color/red"
+            android:textSize="@dimen/slider_text_small_new"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_continue_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/button_left_margin"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="@dimen/button_left_margin"
+            android:background="@drawable/rounded_corner_button_with_border"
+            android:text="@string/btn_next"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPrimary" />
     </LinearLayout>
 </ScrollView>

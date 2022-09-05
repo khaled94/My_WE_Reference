@@ -1,25 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/color_background" android:layout_width="match_parent" android:layout_height="match_parent">
-    <com.google.android.material.appbar.AppBarLayout android:theme="@style/AppTheme_AppBarOverlay" android:gravity="center" android:layout_gravity="top|center_horizontal" android:id="@+id/app_bar" android:background="@drawable/border_my_account" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@+id/toolbar_layout" android:background="@drawable/border_my_account" android:layout_width="match_parent" android:layout_height="wrap_content" app:contentScrim="@color/white" app:layout_scrollFlags="0x3" app:scrimAnimationDuration="0" app:toolbarId="@+id/toolbar" style="@style/Widget.AppCompat.Toolbar">
-            <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="center" android:id="@+id/constraintLayout2" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0">
-                <ImageView android:layout_gravity="end" android:id="@+id/iv_close_expanded" android:padding="@dimen/___10sdp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___16sdp" android:layout_marginEnd="@dimen/___8sdp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="0" app:srcCompat="@drawable/ic_close"/>
-                <ImageView android:id="@+id/appCompatImageView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/___12sdp" app:layout_constraintBottom_toBottomOf="@+id/linearLayoutCompat2" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat2" app:srcCompat="@drawable/ic_account"/>
-                <androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical" android:id="@+id/linearLayoutCompat2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="@dimen/___12sdp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/appCompatImageView" app:layout_constraintTop_toBottomOf="@+id/iv_close_expanded">
-                    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___19ssp" android:textColor="#313131" android:id="@+id/appCompatTextView2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/my_account" android:textAlignment="viewStart" app:layout_constraintStart_toEndOf="@+id/appCompatImageView" app:layout_constraintTop_toTopOf="@+id/appCompatImageView" style="@style/MontserratBold"/>
-                    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___11ssp" android:textColor="@color/color_purple_new" android:id="@+id/tvContactNumber" android:layout_width="match_parent" android:layout_height="wrap_content" app:fontFamily="@font/montserrat_medium" app:layout_constraintStart_toEndOf="@+id/appCompatImageView" app:layout_constraintTop_toBottomOf="@+id/appCompatTextView2"/>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:background="@drawable/border_my_account"
+        android:gravity="center"
+        android:theme="@style/AppTheme_AppBarOverlay">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            style="@style/Widget.AppCompat.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_my_account"
+            app:contentScrim="@color/white"
+            app:layout_scrollFlags="scroll"
+            app:scrimAnimationDuration="0"
+            app:toolbarId="@+id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_close_expanded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/___16sdp"
+                    android:layout_marginEnd="@dimen/___8sdp"
+                    android:padding="@dimen/___10sdp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_close" />
+
+                <ImageView
+                    android:id="@+id/appCompatImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/___12sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/linearLayoutCompat2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/linearLayoutCompat2"
+                    app:srcCompat="@drawable/ic_account" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearLayoutCompat2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/___12sdp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_close_expanded">
+
+                    <com.ucare.we.view.AppCompatTextView
+                        android:id="@+id/appCompatTextView2"
+                        style="@style/MontserratBold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_account"
+                        android:textAlignment="viewStart"
+                        android:textColor="#313131"
+                        android:textSize="@dimen/___19ssp"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatImageView" />
+
+                    <com.ucare.we.view.AppCompatTextView
+                        android:id="@+id/tvContactNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/color_purple_new"
+                        android:textSize="@dimen/___11ssp"
+                        app:fontFamily="@font/montserrat_medium"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+                        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView2" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
-                <Button android:textSize="@dimen/___9ssp" android:textColor="@color/color_dark_purple_new" android:gravity="center" android:id="@+id/btnManageYourNumber" android:background="@drawable/rounded_selected_primary" android:padding="0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" android:minHeight="@dimen/___31sdp" android:text="@string/manage_your_numbers" android:layout_marginStart="26dp" android:layout_marginEnd="26dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2" style="@style/MontserratBold"/>
+
+                <Button
+                    android:id="@+id/btnManageYourNumber"
+                    style="@style/MontserratBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/rounded_selected_primary"
+                    android:gravity="center"
+                    android:minHeight="@dimen/___31sdp"
+                    android:padding="0dp"
+                    android:text="@string/manage_your_numbers"
+                    android:textColor="@color/color_dark_purple_new"
+                    android:textSize="@dimen/___9ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-            <androidx.appcompat.widget.Toolbar android:layout_gravity="center" android:id="@+id/toolbar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:layout_collapseMode="1" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" app:popupTheme="@style/AppTheme_PopupOverlay">
-                <androidx.appcompat.widget.LinearLayoutCompat android:layout_width="match_parent" android:layout_height="wrap_content">
-                    <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___19ssp" android:textColor="@color/black" android:gravity="start" android:layout_gravity="end" android:id="@+id/tvTitle" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/my_account" android:layout_weight="1" android:fontFamily="@font/montserrat_bold" app:srcCompat="@drawable/ic_close_black_24dp"/>
-                    <ImageView android:layout_gravity="end" android:id="@+id/iv_close" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" app:srcCompat="@drawable/ic_close_black_24dp"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_collapseMode="parallax"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:popupTheme="@style/AppTheme_PopupOverlay">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.ucare.we.view.AppCompatTextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="start"
+                        android:text="@string/my_account"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/___19ssp"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_close_black_24dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/ic_close_black_24dp" />
                 </androidx.appcompat.widget.LinearLayoutCompat>
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
-    <androidx.core.widget.NestedScrollView android:id="@+id/nestedscrolllayout" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <include android:id="@+id/scrollLayout" layout="@layout/activity_content"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedscrolllayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include
+            android:id="@+id/scrollLayout"
+            layout="@layout/activity_content" />
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

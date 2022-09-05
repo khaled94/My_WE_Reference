@@ -1763,4 +1763,8 @@
     <dimen name="welcome_margin">5dp</dimen>
     <dimen name="welcome_margin_top">27dp</dimen>
     <dimen name="wrap_content">-2</dimen>
+
+
+    <dimen name="slider_text_medium">20</dimen>
+    <dimen name="slider_text_small">12sp</dimen>
 </resources>

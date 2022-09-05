@@ -1,16 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
-    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
-        <LinearLayout android:orientation="vertical" android:id="@+id/llQuotaTransferItems" android:padding="15dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
-            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_large_new" android:textColor="@color/colorPrimaryDark" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="@string/quota_transfer_text_title" style="@style/MyriadProRegularLeft"/>
-            <EditText android:textSize="@dimen/text_large_new" android:textColor="@color/colorPrimary" android:id="@+id/edtMobileNumber" android:background="@drawable/edit_text_underline_new" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="15dp" android:hint="@string/mobile_number" android:maxLength="11" android:inputType="number" style="@style/MyriadProRegularLeft"/>
-            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_large_new" android:textColor="@color/colorPrimaryDark" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="@string/transfer_from" style="@style/MyriadProRegularLeft"/>
-            <com.reginald.editspinner.EditSpinner android:textSize="@dimen/text_large_new" android:textColor="@color/colorPrimary" android:gravity="start|center_vertical" android:id="@+id/SpnrQuotaTransferOption" android:background="@drawable/edit_text_underline_new" android:layout_width="match_parent" android:layout_height="48dp" android:hint="@string/transfer_unit" app:dropDownDrawable="@drawable/spinner_icon" app:dropDownDrawableHeight="25dp" app:dropDownDrawableSpacing="15dp" app:dropDownDrawableWidth="25dp" style="@style/MyriadProRegular"/>
-            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_large_new" android:textColor="@color/colorPrimaryDark" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:text="@string/quota_to_be_transferred" style="@style/MyriadProRegularLeft"/>
-            <EditText android:textSize="@dimen/text_large_new" android:textColor="@color/colorPrimary" android:id="@+id/edtAmount" android:background="@drawable/edit_text_underline_new" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginBottom="15dp" android:hint="@string/quota_amount_transfer_10G" android:inputType="number" style="@style/MontserratRegular"/>
-            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/slider_text_small_new" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="15dp" android:text="@string/quota_balance_amount_new" style="@style/MyriadProRegularLeft"/>
-            <Button android:textSize="@dimen/text_large_new" android:textColor="@color/colorPrimary" android:gravity="center" android:id="@+id/btnNext" android:background="@drawable/new_rounded_corner_button_stroke" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginBottom="30dp" android:text="@string/btn_next"/>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llQuotaTransferItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:visibility="visible">
+
+            <com.ucare.we.view.AppCompatTextView
+                style="@style/MyriadProRegularLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/quota_transfer_text_title"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_large_new" />
+
+            <EditText
+                android:id="@+id/edtMobileNumber"
+                style="@style/MyriadProRegularLeft"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edit_text_underline_new"
+                android:hint="@string/mobile_number"
+                android:inputType="number"
+                android:maxLength="11"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_large_new" />
+
+            <com.ucare.we.view.AppCompatTextView
+                style="@style/MyriadProRegularLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/transfer_from"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_large_new" />
+
+            <com.reginald.editspinner.EditSpinner
+                android:id="@+id/SpnrQuotaTransferOption"
+                style="@style/MyriadProRegular"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/edit_text_underline_new"
+                android:gravity="start|center_vertical"
+                android:hint="@string/transfer_unit"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_large_new"
+                app:dropDownDrawable="@drawable/spinner_icon"
+                app:dropDownDrawableHeight="25dp"
+                app:dropDownDrawableSpacing="15dp"
+                app:dropDownDrawableWidth="25dp" />
+
+            <com.ucare.we.view.AppCompatTextView
+                style="@style/MyriadProRegularLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/quota_to_be_transferred"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_large_new" />
+
+            <EditText
+                android:id="@+id/edtAmount"
+                style="@style/MontserratRegular"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edit_text_underline_new"
+                android:hint="@string/quota_amount_transfer_10G"
+                android:inputType="number"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_large_new" />
+
+            <com.ucare.we.view.AppCompatTextView
+                style="@style/MyriadProRegularLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="@string/quota_balance_amount_new"
+                android:textSize="@dimen/slider_text_small_new" />
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/new_rounded_corner_button_stroke"
+                android:gravity="center"
+                android:text="@string/btn_next"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_large_new" />
         </LinearLayout>
-        <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/text_large_new" android:textColor="@color/colorPrimaryDark" android:id="@+id/tvNoQuotaTransfer" android:padding="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/you_must_subscribe_to_any_quota_till_you_can_use_this_service" style="@style/MyriadProRegularLeft"/>
+
+        <com.ucare.we.view.AppCompatTextView
+            android:id="@+id/tvNoQuotaTransfer"
+            style="@style/MyriadProRegularLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/you_must_subscribe_to_any_quota_till_you_can_use_this_service"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_large_new" />
     </LinearLayout>
 </ScrollView>

@@ -1,16 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp">
-    <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="match_parent" app:cardCornerRadius="6dp" app:cardElevation="2dp" app:cardPreventCornerOverlap="true" app:cardUseCompatPadding="true" app:elevation="12dp">
-        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent" android:layout_height="wrap_content">
-            <com.ucare.we.view.AppCompatTextView android:textAppearance="@style/TextAppearance.AppCompat.Caption" android:textSize="@dimen/___11ssp" android:textColor="@color/color_grey_new" android:id="@+id/tv_bundle_type" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___7sdp" android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" style="@style/MontserratLight"/>
-            <com.ucare.we.view.CustomAppCompatTextView android:textSize="@dimen/___13ssp" android:textColor="@color/color_black_new" android:id="@+id/tv_bundle_name" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="@dimen/___21sdp" android:drawablePadding="8dp" android:textAlignment="viewStart" android:layout_marginStart="16dp" app:drawableStartCompat="@drawable/ic_mobile_internet_small" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/tv_bundle_type" style="@style/MontserratSemiBold"/>
-            <com.ucare.we.view.AppCompatTextView android:textSize="@dimen/___11ssp" android:textColor="@color/color_dark_purple_new" android:id="@+id/tv_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="@+id/yourCircularProgressbar" app:layout_constraintEnd_toEndOf="@+id/yourCircularProgressbar" app:layout_constraintStart_toStartOf="@+id/yourCircularProgressbar" app:layout_constraintTop_toTopOf="@+id/yourCircularProgressbar" style="@style/MontserratSemiBold"/>
-            <com.ucare.we.view.CircularProgressView android:id="@+id/yourCircularProgressbar" android:layout_width="100dp" android:layout_height="100dp" android:layout_marginTop="16dp" android:layout_marginBottom="@dimen/___12sdp" android:layout_marginStart="16dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/tv_bundle_name" style="@style/progressBar"/>
-            <com.ucare.we.view.AppCompatTextView android:textAppearance="@style/TextAppearance.AppCompat.Caption" android:textSize="@dimen/___9ssp" android:textColor="@color/color_black_new" android:id="@+id/serviceIdNumber" android:layout_width="0dp" android:layout_height="wrap_content" android:textAlignment="viewStart" android:layout_marginStart="16dp" android:layout_marginEnd="8dp" app:layout_constraintBottom_toTopOf="@+id/remaining_textview" app:layout_constraintEnd_toEndOf="0" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toEndOf="@+id/yourCircularProgressbar" app:layout_constraintTop_toTopOf="@+id/yourCircularProgressbar" style="@style/MontserratMedium"/>
-            <com.ucare.we.view.AppCompatTextView android:textAppearance="@style/TextAppearance.AppCompat.Caption" android:textSize="@dimen/___9ssp" android:textColor="@color/color_black_new" android:id="@+id/remaining_textview" android:layout_width="0dp" android:layout_height="wrap_content" android:textAlignment="viewStart" android:layout_marginStart="16dp" android:layout_marginEnd="8dp" app:layout_constraintBottom_toTopOf="@+id/consumed_textview" app:layout_constraintEnd_toEndOf="0" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toEndOf="@+id/yourCircularProgressbar" app:layout_constraintTop_toBottomOf="@+id/serviceIdNumber" style="@style/MontserratMedium"/>
-            <com.ucare.we.view.AppCompatTextView android:textAppearance="@style/TextAppearance.AppCompat.Caption" android:textSize="@dimen/___9ssp" android:textColor="@color/color_black_new" android:id="@+id/consumed_textview" android:layout_width="0dp" android:layout_height="wrap_content" android:textAlignment="viewStart" android:layout_marginStart="16dp" android:layout_marginEnd="8dp" app:layout_constraintBottom_toTopOf="@+id/appCompatTextView3" app:layout_constraintEnd_toEndOf="0" app:layout_constraintHorizontal_bias="0.5" app:layout_constraintStart_toEndOf="@+id/yourCircularProgressbar" app:layout_constraintTop_toBottomOf="@+id/remaining_textview" style="@style/MontserratMedium"/>
-            <com.ucare.we.view.AppCompatTextView android:textAppearance="@style/TextAppearance.AppCompat.Caption" android:textSize="@dimen/___9ssp" android:textColor="@color/color_red" android:id="@+id/appCompatTextView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/expiry_date" android:textAlignment="viewStart" android:layout_marginStart="16dp" app:layout_constraintBottom_toBottomOf="@+id/yourCircularProgressbar" app:layout_constraintStart_toEndOf="@+id/yourCircularProgressbar" app:layout_constraintTop_toBottomOf="@+id/consumed_textview" style="@style/MontserratMedium"/>
-            <com.ucare.we.view.AppCompatTextView android:textAppearance="@style/TextAppearance.AppCompat.Caption" android:textSize="@dimen/___9ssp" android:textColor="@color/color_red" android:id="@+id/txtRenewalDate" android:layout_width="0dp" android:layout_height="wrap_content" android:textAlignment="viewStart" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" app:layout_constraintBaseline_toBaselineOf="@+id/appCompatTextView3" app:layout_constraintEnd_toEndOf="0" app:layout_constraintHorizontal_bias="0" app:layout_constraintStart_toEndOf="@+id/appCompatTextView3" style="@style/MontserratSemiBold"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:elevation="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.ucare.we.view.AppCompatTextView
+                android:id="@+id/tv_bundle_type"
+                style="@style/MontserratLight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/___7sdp"
+                android:textColor="@color/color_grey_new"
+                android:textSize="@dimen/___11ssp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.ucare.we.view.CustomAppCompatTextView
+                android:id="@+id/tv_bundle_name"
+                style="@style/MontserratSemiBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/___21sdp"
+                android:drawablePadding="8dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/color_black_new"
+                android:textSize="@dimen/___13ssp"
+                app:drawableStartCompat="@drawable/ic_mobile_internet_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_bundle_type" />
+
+            <com.ucare.we.view.AppCompatTextView
+                android:id="@+id/tv_progress"
+                style="@style/MontserratSemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_dark_purple_new"
+                android:textSize="@dimen/___11ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/yourCircularProgressbar"
+                app:layout_constraintEnd_toEndOf="@+id/yourCircularProgressbar"
+                app:layout_constraintStart_toStartOf="@+id/yourCircularProgressbar"
+                app:layout_constraintTop_toTopOf="@+id/yourCircularProgressbar" />
+
+            <com.ucare.we.view.CircularProgressView
+                android:id="@+id/yourCircularProgressbar"
+                style="@style/progressBar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="@dimen/___12sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_bundle_name" />
+
+            <com.ucare.we.view.AppCompatTextView
+                android:id="@+id/serviceIdNumber"
+                style="@style/MontserratMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/color_black_new"
+                android:textSize="@dimen/___9ssp"
+                app:layout_constraintBottom_toTopOf="@+id/remaining_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/yourCircularProgressbar"
+                app:layout_constraintTop_toTopOf="@+id/yourCircularProgressbar" />
+
+            <com.ucare.we.view.AppCompatTextView
+                android:id="@+id/remaining_textview"
+                style="@style/MontserratMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/color_black_new"
+                android:textSize="@dimen/___9ssp"
+                app:layout_constraintBottom_toTopOf="@+id/consumed_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/yourCircularProgressbar"
+                app:layout_constraintTop_toBottomOf="@+id/serviceIdNumber" />
+
+            <com.ucare.we.view.AppCompatTextView
+                android:id="@+id/consumed_textview"
+                style="@style/MontserratMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/color_black_new"
+                android:textSize="@dimen/___9ssp"
+                app:layout_constraintBottom_toTopOf="@+id/appCompatTextView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/yourCircularProgressbar"
+                app:layout_constraintTop_toBottomOf="@+id/remaining_textview" />
+
+            <com.ucare.we.view.AppCompatTextView
+                android:id="@+id/appCompatTextView3"
+                style="@style/MontserratMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/expiry_date"
+                android:textAlignment="viewStart"
+                android:textColor="@color/color_red"
+                android:textSize="@dimen/___9ssp"
+                app:layout_constraintBottom_toBottomOf="@+id/yourCircularProgressbar"
+                app:layout_constraintStart_toEndOf="@+id/yourCircularProgressbar"
+                app:layout_constraintTop_toBottomOf="@+id/consumed_textview" />
+
+            <com.ucare.we.view.AppCompatTextView
+                android:id="@+id/txtRenewalDate"
+                style="@style/MontserratSemiBold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/color_red"
+                android:textSize="@dimen/___9ssp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/appCompatTextView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toEndOf="@+id/appCompatTextView3" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 </LinearLayout>
